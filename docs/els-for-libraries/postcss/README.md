@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for PostCSS from TuxCare provides security fixes
 
 ## Supported PostCSS Versions
 
-* PostCSS 7.0.39, 8.3.6
+* PostCSS 5.2.18, 6.0.23, 7.0.39, 8.3.6
 
 ## Connection to ELS for PostCSS Library
 
@@ -35,8 +35,8 @@ TuxCare provides ELS for PostCSS as an NPM package, hosted on a secure internal 
 
    ```text
    registry=https://registry.npmjs.org/
-   @els-js:registry=https://nexus.repo.tuxcare.com/repository/els-js/
-   //nexus.repo.tuxcare.com/repository/els-js/:_auth=${TOKEN}
+   @els-js:registry=https://nexus.repo.tuxcare.com/repository/els_js/
+   //nexus.repo.tuxcare.com/repository/els_js/:_auth=${TOKEN}
    ```
 
    :::warning
@@ -50,6 +50,32 @@ TuxCare provides ELS for PostCSS as an NPM package, hosted on a secure internal 
      Manually update your `package.json` file by replacing your PostCSS dependencies with the TuxCare packages. This method gives you full control over which packages to update.
 
      <TableTabs label="Choose PostCSS version: " >
+
+      <template #postcss_5.2.18>
+
+      ```text
+      "dependencies": {
+        "postcss": "npm:@els-js/postcss@>=5.2.18-tuxcare.1"
+      },
+      "overrides": {
+        "postcss@5.2.18": "npm:@els-js/postcss@>=5.2.18-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+      <template #postcss_6.0.23>
+
+      ```text
+      "dependencies": {
+        "postcss": "npm:@els-js/postcss@>=6.0.23-tuxcare.1"
+      },
+      "overrides": {
+        "postcss@6.0.23": "npm:@els-js/postcss@>=6.0.23-tuxcare.1"
+      }
+      ```
+
+      </template>
 
       <template #postcss_7.0.39>
 
@@ -137,6 +163,16 @@ VEX is a machine-readable format that tells you if a known vulnerability is actu
 
 TuxCare provides VEX for PostCSS ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/postcss/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/postcss/).
 
+## Software Bill of Materials (SBOM)
+
+For each published ELS package and version, TuxCare generates SBOM files. Those artifacts are published to TuxCare Nexus.
+
+You can browse SBOM files for PostCSS here:
+
+[https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom:postcss](https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom:postcss)
+
+Use the credentials you received for TuxCare ELS ([Step 1: Get Token](#step-1:-get-token)) to access Nexus.
+
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
 If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), remove node_modules, clear the npm cache to avoid conflicts, and then run the installation command:
@@ -151,6 +187,15 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 Fixes for the following vulnerabilities are available in ELS for PostCSS from TuxCare versions:
 
 <TableTabs label="Choose PostCSS version: " >
+
+<template #postcss_6.0.23>
+
+| CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
+| :------------: | :------: |:--------:|:------------------:| :----------------: |
+| CVE-2021-23382 | Direct   | High     | postcss           | < 8.2.13           |
+| CVE-2023-44270 | Direct   | Medium   | postcss           | < 8.4.31           |
+
+  </template>
 
 <template #postcss_7.0.39>
 

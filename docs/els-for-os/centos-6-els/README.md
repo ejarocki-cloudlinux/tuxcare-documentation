@@ -13,13 +13,13 @@
 
 <ELSSteps>
 
-1. Download the install script:
+1. Download the install script
 
    ```
    wget https://repo.els.tuxcare.com/centos6-els/install-centos6-els-repo.sh
    ```
 
-2. Run with your license key.
+2. Run with your license key
 
    The script registers the server in the CLN with the key, adds a PGP key to the server.
 
@@ -27,7 +27,7 @@
    sh install-centos6-els-repo.sh --license-key XXXXXXXX
    ```
 
-3. Verify that the installation was successful by running the following command:
+3. Verify that the installation was successful by running the following command
 
    ```
    yum info els-define
@@ -56,15 +56,15 @@
 
 </ELSSteps>
 
-## What's next?
+## What's Next?
 
 <WhatsNext hide-title>
 
 * ![](/images/shield-alert.webp) [OVAL](https://security.tuxcare.com/oval/els_os/centos6els/oval.xml) — OVAL security data
 * ![](/images/unlock-alt.webp) [CSAF](https://security.tuxcare.com/csaf/v2/els_os/centos6els/) — CSAF security advisories
-* ![](/images/eye.webp) [RSS](https://cve.tuxcare.com/rss_feed/els/releases/centos6els) — Release notifications
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=CentOS+6+ELS) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Machine-Readable Security Data](/els-for-os/machine-readable-security-data/) — Errata, OVAL, CSAF
-* ![](/images/box.webp) [Supported packages list](https://cve.tuxcare.com/els/projects?os=ed7974b4-29fc-4e1c-999f-6c76e065e48f&project=&version=&packages=&orderBy=project-asc) — Full list of packages covered by ELS
+* ![](/images/box.webp) [Supported packages list](https://tuxcare.com/cve-tracker/products/?product=CentOS+6+ELS) — Full list of packages covered by ELS
 * ![](/images/wrench.webp) [Managing the ELS repository](/els-for-os/managing-els-repository/) — Updates, local mirror, and other repository operations
 
 </WhatsNext>

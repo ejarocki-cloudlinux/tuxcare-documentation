@@ -35,8 +35,8 @@ TuxCare provides ELS for jQuery UI as an NPM package, hosted on a secure interna
 
    ```text
    registry=https://registry.npmjs.org/
-   @els-js:registry=https://nexus.repo.tuxcare.com/repository/els-js/
-   //nexus.repo.tuxcare.com/repository/els-js/:_auth=${TOKEN}
+   @els-js:registry=https://nexus.repo.tuxcare.com/repository/els_js/
+   //nexus.repo.tuxcare.com/repository/els_js/:_auth=${TOKEN}
    ```
 
    :::warning
@@ -109,6 +109,16 @@ TuxCare provides ELS for jQuery UI as an NPM package, hosted on a secure interna
 2. After reviewing the dependencies, run your application to ensure everything works correctly.
 
 The `npm` tool should be able to identify and resolve dependencies from the TuxCare ELS for jQuery UI repository.
+
+## Software Bill of Materials (SBOM)
+
+For each published ELS package and version, TuxCare generates SBOM files. Those artifacts are published to TuxCare Nexus.
+
+You can browse SBOM files for jQuery UI here:
+
+[https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom:jquery-ui](https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom:jquery-ui)
+
+Use the credentials you received for TuxCare ELS ([Step 1: Get Token](#step-1:-get-token)) to access Nexus.
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 

@@ -30,7 +30,7 @@ alt-nodejs provides a more flexible and convenient environment for working with 
 | Ubuntu                                                       | DEB          | 18.04, 20.04, 22.04, 24.04        |
 | Debian                                                       | DEB          | 10, 11, 12, 13                    |
 
-**For supported Node.js versions, see [cve.tuxcare.com](https://cve.tuxcare.com/els-alt-nodejs/projects).**
+**For supported Node.js versions, see [tuxcare.com/cve-tracker](https://tuxcare.com/cve-tracker/).**
 
 **Supported architecture:** x86_64 (64-bit)
 
@@ -97,7 +97,9 @@ alt-nodejs provides a more flexible and convenient environment for working with 
 
 </ELSSteps>
 
-<WhatsNext>
+## What's Next?
+
+<WhatsNext hide-title>
 
 * ![](/images/shield.webp) [Machine-readable security data](../machine-readable-security-data/) — CSAF advisories and RSS feeds for Node.js ELS
 

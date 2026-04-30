@@ -9,83 +9,94 @@ Endless Lifecycle Support (ELS) for Laravel from TuxCare provides security fixes
 
 Other versions upon request.
 
-## Connection to ELS for Laravel Repository
+## Installation
 
-This guide outlines the steps needed to integrate the TuxCare ELS for Laravel repository into your Laravel application. The repository provides trusted Laravel framework versions that can be easily integrated into your **Composer** projects.
+<ELSPrerequisites>
 
-### Step 1: Get user credentials
+* Nexus repository access credentials (username and password) — contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+* To browse available artifacts, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_php) and click Sign in in the top right corner. You may need to refresh the page after logging in.
 
-You need a username and password in order to use TuxCare ELS for Laravel repository. Anonymous access is disabled. To receive the credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+</ELSPrerequisites>
 
-### Step 2: Configure Composer authentication
+<ELSSteps>
 
-1. Create or edit the `auth.json` file for the user running Composer:
+1. Locate the `auth.json` file
 
-    * **Linux/macOS**: 
+   Composer reads credentials from a per-user `auth.json`. Create or edit the file at:
 
-        ```text
-        ~/.composer/auth.json
-        ```
+   * **Linux/macOS**: 
+     
+     ```
+     ~/.composer/auth.json
+     ```
 
-    * **Windows**: 
+   * **Windows**:
+   
+     ```
+     %APPDATA%\Composer\auth.json
+     ```
 
-        ```text
-        %APPDATA%\Composer\auth.json
-        ```
+2. Add your TuxCare credentials
 
-2. Use either the Composer CLI or edit `auth.json` directly to add your credentials for `nexus.repo.tuxcare.com`.
+   Use either the Composer CLI or edit `auth.json` directly to add credentials for `nexus.repo.tuxcare.com`:
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer config --global --auth http-basic.nexus.repo.tuxcare.com USERNAME PASSWORD` },
      { title: 'auth.json', content: authjson }
    ]" />
 
-   Replace `USERNAME` and `PASSWORD` with the credentials you received in [Step 1](#step-1-get-user-credentials).
+   Replace `USERNAME` and `PASSWORD` with the credentials provided by TuxCare.
 
-### Step 3: Register the TuxCare repository
+3. Register the TuxCare repository
 
-Add the `els_php` Composer repository either via CLI or by editing `composer.json`:
+   Add the `els_php` Composer repository either via CLI or by editing `composer.json`:
 
-  <CodeTabs :tabs="[
-    { title: 'Composer CLI', content: cli },
-    { title: 'composer.json', content: composerjson }
-  ]" />
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: cli },
+     { title: 'composer.json', content: composerjson }
+   ]" />
 
-### Step 4: Install Laravel components
+4. Install Laravel components
 
-Install the TuxCare-maintained Laravel or Illuminate release that matches your project:
+   Install the TuxCare-maintained Laravel or Illuminate release that matches your project:
 
-<TableTabs label="Choose version: " >
+   <TableTabs label="Choose version: " >
 
-<template #Laravel>
+   <template #Laravel>
 
-<CodeTabs :tabs="[
-  { title: 'Composer CLI', content: `composer require laravel/framework:10.48.28-p1+tuxcare` },
-  { title: 'composer.json', content: laraveljson }
-]" />
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require laravel/framework:10.48.28-p1+tuxcare` },
+     { title: 'composer.json', content: laraveljson }
+   ]" />
 
-</template>
+   </template>
 
-<template #Illuminate>
+   <template #Illuminate>
 
-<CodeTabs :tabs="[
-  { title: 'Composer CLI', content: `composer require illuminate/view:5.4.36-p1+tuxcare` },
-  { title: 'composer.json', content: illuminatejson }
-]" />
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require illuminate/view:5.4.36-p1+tuxcare` },
+     { title: 'composer.json', content: illuminatejson }
+   ]" />
 
-</template>
+   </template>
 
-</TableTabs>
+   </TableTabs>
 
-**Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
+   **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
 
-If you edited `composer.json` manually, run `composer update` to install the package:
+   :::tip
 
-```text
-composer update
-```
+   If you edited `composer.json` manually, run `composer update` to install the package:
+   
+   ```
+   composer update
+   ```
+   
+   Composer will resolve dependencies against the TuxCare repository and install the patched releases.
 
-Composer will resolve dependencies against the TuxCare repository and install the patched releases.
+   :::
+
+</ELSSteps>
 
 ### Composer Repository Configuration
 
@@ -111,28 +122,6 @@ it usually means your project requires a package version that is not yet availab
 
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
 
-## Vulnerability Exploitability eXchange (VEX)
-
-VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives and helps prioritize real risks.
-
-TuxCare provides VEX for:
-* Laravel: [security.tuxcare.com/vex/cyclonedx/els_lang_php/laravel-framework/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/laravel-framework/)
-* Illuminate: [security.tuxcare.com/vex/cyclonedx/els_lang_php/illuminate-view/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/illuminate-view/)
-
-## How to Upgrade to a Newer Version
-
-If you have already installed a TuxCare Laravel package and want to upgrade to a newer release, update the version string in your `composer.json` file or run the `composer require` command with the new version:
-
-```text
-composer require laravel/framework:VERSION-pN+tuxcare
-```
-
-Then run `composer update` to apply the changes:
-
-```text
-composer update
-```
-
 ## Resolved CVEs in Laravel and Illuminate
 
 Fixes for the following vulnerabilities are available in ELS for Laravel from TuxCare:
@@ -141,45 +130,67 @@ Fixes for the following vulnerabilities are available in ELS for Laravel from Tu
 
 <template #Laravel_5.4>
 
-| CVE ID         | Severity | Vulnerable versions           | Fixed in version    |
-|----------------|----------|-------------------------------|---------------------|
-| CVE-2021-43808 | Medium   | < 6.18.35, < 7.24.0           | 5.4.36-p2+tuxcare   |
+| CVE ID              | Severity | Vulnerable versions                                              | Fixed in version    |
+|---------------------|----------|------------------------------------------------------------------|---------------------|
+| CVE-2021-43808      | Medium   | < 6.18.35, < 7.24.0                                              | 5.4.36-p1+tuxcare   |
+| CVE-2021-21263      | High     | < 6.20.14, < 7.30.4, < 8.24.0                                    | 5.4.36-p2+tuxcare   |
+| GHSA-x7p5-p2c9-phvg | High     | < 6.20.14, < 7.30.4, < 8.24.0                                    | 5.4.36-p2+tuxcare   |
+| GHSA-jwvj-pwww-3mj5 | High     | < 6.20.14, < 7.30.4, < 8.24.0                                    | 5.4.36-p2+tuxcare   |
+| CVE-2017-14775      | Medium   | < 5.5.10                                                         | 5.4.36-p2+tuxcare   |
+| CVE-2017-16894      | High     | <= 5.5.21                                                        | 5.4.36-p2+tuxcare   |
+| CVE-2018-15133      | High     | <= 5.5.40, 5.6.0 - 5.6.29                                        | 5.4.36-p2+tuxcare   |
+| CVE-2024-52301      | High     | < 6.20.45, < 7.30.7, < 8.83.28, < 9.52.17, < 10.48.23, < 11.31.0 | 5.4.36-p2+tuxcare   |
+| CVE-2020-19316      | High     | < 5.8.17                                                         | 5.4.36-p2+tuxcare   |
+| CVE-2020-24941      | High     | < 6.18.35, < 7.24.0                                              | 5.4.36-p2+tuxcare   |
+| CVE-2025-27515      | Medium   | < 11.44.1, < 12.1.1                                              | 5.4.36-p2+tuxcare   |
+| GHSA-7852-w36x-6mf6 | Medium   | < 5.5.40, < 5.6.15                                               | 5.4.36-p2+tuxcare   |
+| GHSA-4mg9-vhxq-vm7j | High     | < 6.20.26, < 7.30.5, < 8.40.0                                    | 5.4.36-p3+tuxcare   |
+| GHSA-wq8p-mqvg-2p5h | High     | < 6.20.26, < 7.30.5, < 8.40.0                                    | 5.4.36-p3+tuxcare   |
 
 </template>
 
 <template #Laravel_5.5>
 
-| CVE ID              | Severity | Vulnerable versions           | Fixed in version    |
-|---------------------|----------|-------------------------------|---------------------|
-| CVE-2021-43808      | Medium   | < 6.18.35, < 7.24.0           | 5.5.50-p1+tuxcare   |
-| CVE-2020-24941      | High     | < 6.18.35, < 7.24.0           | 5.5.50-p1+tuxcare   |
-| GHSA-x7p5-p2c9-phvg | High     | < 6.20.14, < 7.30.4, < 8.24.0 | 5.5.50-p1+tuxcare   |
-| GHSA-qm5c-m76r-2hfr | Critical | < 6.18.31, < 7.22.4           | 5.5.50-p1+tuxcare   |
-| GHSA-4mg9-vhxq-vm7j | High     | < 6.18.35, < 7.24.0           | 5.5.50-p1+tuxcare   |
+| CVE ID              | Severity | Vulnerable versions                                              | Fixed in version    |
+|---------------------|----------|------------------------------------------------------------------|---------------------|
+| CVE-2021-43808      | Medium   | < 6.18.35, < 7.24.0                                              | 5.5.50-p1+tuxcare   |
+| CVE-2020-24941      | High     | < 6.18.35, < 7.24.0                                              | 5.5.50-p1+tuxcare   |
+| GHSA-x7p5-p2c9-phvg | High     | < 6.20.14, < 7.30.4, < 8.24.0                                    | 5.5.50-p1+tuxcare   |
+| GHSA-qm5c-m76r-2hfr | Critical | < 6.18.31, < 7.22.4                                              | 5.5.50-p1+tuxcare   |
+| GHSA-4mg9-vhxq-vm7j | High     | < 6.18.35, < 7.24.0                                              | 5.5.50-p1+tuxcare   |
+| CVE-2024-52301      | High     | < 6.20.45, < 7.30.7, < 8.83.28, < 9.52.17, < 10.48.23, < 11.31.0 | 5.5.50-p1+tuxcare   |
+| CVE-2020-19316      | High     | < 5.8.17                                                         | 5.5.50-p1+tuxcare   |
+| CVE-2025-27515      | Medium   | < 11.44.1, < 12.1.1                                              | 5.5.50-p1+tuxcare   |
 
 </template>
 
 <template #Laravel_5.6>
 
-| CVE ID              | Severity | Vulnerable versions           | Fixed in version    |
-|---------------------|----------|-------------------------------|---------------------|
-| CVE-2021-43808      | Medium   | < 6.18.35, < 7.24.0           | 5.6.40-p1+tuxcare   |
-| CVE-2020-24941      | High     | < 6.18.35, < 7.24.0           | 5.6.40-p1+tuxcare   |
-| GHSA-x7p5-p2c9-phvg | High     | < 6.20.14, < 7.30.4, < 8.24.0 | 5.6.40-p1+tuxcare   |
-| GHSA-qm5c-m76r-2hfr | Critical | < 6.18.31, < 7.22.4           | 5.6.40-p1+tuxcare   |
-| GHSA-4mg9-vhxq-vm7j | High     | < 6.18.35, < 7.24.0           | 5.6.40-p1+tuxcare   |
+| CVE ID              | Severity | Vulnerable versions                                              | Fixed in version    |
+|---------------------|----------|------------------------------------------------------------------|---------------------|
+| CVE-2021-43808      | Medium   | < 6.18.35, < 7.24.0                                              | 5.6.40-p1+tuxcare   |
+| CVE-2020-24941      | High     | < 6.18.35, < 7.24.0                                              | 5.6.40-p1+tuxcare   |
+| GHSA-x7p5-p2c9-phvg | High     | < 6.20.14, < 7.30.4, < 8.24.0                                    | 5.6.40-p1+tuxcare   |
+| GHSA-qm5c-m76r-2hfr | Critical | < 6.18.31, < 7.22.4                                              | 5.6.40-p1+tuxcare   |
+| GHSA-4mg9-vhxq-vm7j | High     | < 6.18.35, < 7.24.0                                              | 5.6.40-p1+tuxcare   |
+| CVE-2024-52301      | High     | < 6.20.45, < 7.30.7, < 8.83.28, < 9.52.17, < 10.48.23, < 11.31.0 | 5.6.40-p1+tuxcare   |
+| CVE-2020-19316      | High     | < 5.8.17                                                         | 5.6.40-p1+tuxcare   |
+| CVE-2025-27515      | Medium   | < 11.44.1, < 12.1.1                                              | 5.6.40-p1+tuxcare   |
 
 </template>
 
 <template #Laravel_5.7>
 
-| CVE ID              | Severity | Vulnerable versions           | Fixed in version    |
-|---------------------|----------|-------------------------------|---------------------|
-| CVE-2021-43808      | Medium   | < 6.18.35, < 7.24.0           | 5.7.29-p1+tuxcare   |
-| CVE-2020-24941      | High     | < 6.18.35, < 7.24.0           | 5.7.29-p1+tuxcare   |
-| GHSA-x7p5-p2c9-phvg | High     | < 6.20.14, < 7.30.4, < 8.24.0 | 5.7.29-p1+tuxcare   |
-| GHSA-qm5c-m76r-2hfr | Critical | < 6.18.31, < 7.22.4           | 5.7.29-p1+tuxcare   |
-| GHSA-4mg9-vhxq-vm7j | High     | < 6.18.35, < 7.24.0           | 5.7.29-p1+tuxcare   |
+| CVE ID              | Severity | Vulnerable versions                                              | Fixed in version    |
+|---------------------|----------|------------------------------------------------------------------|---------------------|
+| CVE-2021-43808      | Medium   | < 6.18.35, < 7.24.0                                              | 5.7.29-p1+tuxcare   |
+| CVE-2020-24941      | High     | < 6.18.35, < 7.24.0                                              | 5.7.29-p1+tuxcare   |
+| GHSA-x7p5-p2c9-phvg | High     | < 6.20.14, < 7.30.4, < 8.24.0                                    | 5.7.29-p1+tuxcare   |
+| GHSA-qm5c-m76r-2hfr | Critical | < 6.18.31, < 7.22.4                                              | 5.7.29-p1+tuxcare   |
+| GHSA-4mg9-vhxq-vm7j | High     | < 6.18.35, < 7.24.0                                              | 5.7.29-p1+tuxcare   |
+| CVE-2024-52301      | High     | < 6.20.45, < 7.30.7, < 8.83.28, < 9.52.17, < 10.48.23, < 11.31.0 | 5.7.29-p1+tuxcare   |
+| CVE-2020-19316      | High     | < 5.8.17                                                         | 5.7.29-p1+tuxcare   |
+| CVE-2025-27515      | Medium   | < 11.44.1, < 12.1.1                                              | 5.7.29-p1+tuxcare   |
 
 </template>
 
@@ -199,7 +210,28 @@ Fixes for the following vulnerabilities are available in ELS for Laravel from Tu
 
 | CVE ID         | Severity | Vulnerable versions  | Fixed in version    |
 |----------------|----------|----------------------|---------------------|
-| CVE-2025-27515 | Medium   | <= 8.83.29           | 8.83.29-p1+tuxcare  |
+| CVE-2025-27515 | Medium   | < 11.44.1           | 8.83.29-p1+tuxcare  |
+| CVE-2025-27515 | Medium   | < 11.44.1           | 8.12.0-p3+tuxcare  |
+| GHSA-wq8p-mqvg-2p5h | High   | >= 8.0.0, < 8.40.0| 8.12.0-p3+tuxcare  |
+| CVE-2024-52301 | High   | >= 8.0.0, < 83.28| 8.12.0-p3+tuxcare  |
+| CVE-2021-43808 | Medium   | 8.0.0, < 8.75.0| 8.12.0-p3+tuxcare  |
+| CVE-2021-21263 | Medium   | >= 8.0.0, < 8.75.0| 8.12.0-p1+tuxcare  |
+| CVE-2021-21263 | Medium   | >= 8.0.0, < 8.75.0| 8.12.1-p1+tuxcare  |
+| CVE-2025-27515 | Critical   | < 11.44.1           | 8.12.1-p1+tuxcare  |
+| GHSA-wq8p-mqvg-2p5h | High   | >= 8.0.0, < 8.40.0| 8.12.1-p1+tuxcare  |
+| CVE-2024-52301 | Medium   | >= 8.0.0, < 83.28| 8.12.1-p1+tuxcare  |
+| CVE-2021-43808 | Medium   | 8.0.0, < 8.75.0| 8.12.1-p1+tuxcare  |
+| CVE-2021-21263 | Medium   | >= 8.0.0, < 8.75.0| 8.12.2-p1+tuxcare  |
+| CVE-2025-27515 | Critical   | < 11.44.1           | 8.12.2-p1+tuxcare  |
+| GHSA-wq8p-mqvg-2p5h | high   | >= 8.0.0, < 8.40.0| 8.12.2-p1+tuxcare  |
+| CVE-2024-52301 | Medium   | >= 8.0.0, < 83.28| 8.12.2-p1+tuxcare  |
+| CVE-2021-43808 | Medium   | 8.0.0, < 8.75.0| 8.12.2-p1+tuxcare  |
+| CVE-2021-21263 | Medium   | >= 8.0.0, < 8.75.0| 8.12.3-p1+tuxcare  |
+| CVE-2025-27515 | Critical   | < 11.44.1           | 8.12.3-p1+tuxcare  |
+| GHSA-wq8p-mqvg-2p5h | High   | >= 8.0.0, < 8.40.0| 8.12.3-p1+tuxcare  |
+| CVE-2024-52301 | Medium   | >= 8.0.0, < 83.28| 8.12.3-p1+tuxcare  |
+| CVE-2021-43808 | Medium   | 8.0.0, < 8.75.0| 8.12.3-p1+tuxcare  |
+
 
 </template>
 
@@ -229,7 +261,17 @@ Fixes for the following vulnerabilities are available in ELS for Laravel from Tu
 
 </TableTabs>
 
-If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+## What's Next?
+
+<WhatsNext hide-title>
+
+* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/) — Vulnerability Exploitability eXchange feed
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Laravel) — Track vulnerability fixes and updates
+* ![](/images/bolt.webp) [Available fixes](https://tuxcare.com/cve-tracker/fixes?product=Laravel) — Released fixes for Laravel
+* ![](/images/box.webp) [Supported components](https://tuxcare.com/cve-tracker/products?product=Laravel) — Laravel components covered by ELS
+* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-libraries/managing-els-repository/) — Upgrade to a newer version
+
+</WhatsNext>
 
 <script setup>
 

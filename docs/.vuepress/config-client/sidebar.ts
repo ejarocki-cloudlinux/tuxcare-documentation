@@ -273,6 +273,10 @@ export default {
                     icon: '/images/feed-me.webp',
                 },
                 {
+                    path: '/els-for-libraries/drupal/',
+                    icon: '/images/drupal.webp',
+                },
+                {
                     path: '/els-for-libraries/firebase-php-jwt/',
                     icon: '/images/firebase.webp',
                 },
@@ -299,6 +303,10 @@ export default {
                 {
                     path: '/els-for-libraries/phpspreadsheet/',
                     icon: '/images/phpspreadsheet.webp',
+                },
+                {
+                    path: '/els-for-libraries/saloon/',
+                    icon: '/images/saloon.webp',
                 },
                 {
                     path: '/els-for-libraries/swiftmailer/',
@@ -430,6 +438,10 @@ export default {
                     icon: '/images/requirejs-logo.webp',
                 },
                 {
+                    path: '/els-for-libraries/svelte/',
+                    icon: '/images/svelte-logo.webp',
+                },
+                {
                     path: '/els-for-libraries/tailwindcss/',
                     icon: '/images/tailwindcss-logo.webp',
                 },
@@ -474,6 +486,12 @@ export default {
                     path: '/els-for-libraries/dotnet/',
                     icon: '/images/dotnet-logo.webp',
                 },
+                {
+                    title: 'Resources',
+                    type: 'section-header',
+                    icon: '/images/star.webp',
+                },
+                "/els-for-libraries/managing-els-repository/",
             ]
         },
     ],
@@ -515,6 +533,7 @@ export default {
                     title: 'MySQL and Percona Server',
                     icon: '/images/mysql.webp',
                 },
+                "/els-for-applications/managing-els-repository/",
             ]
         },
     ],

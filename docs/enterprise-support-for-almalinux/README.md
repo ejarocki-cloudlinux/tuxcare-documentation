@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD033 MD029 MD036 MD059 -->
+<!-- markdownlint-disable MD033 MD029 MD036 MD059 MD060 -->
 
 # **Enterprise Support for AlmaLinux**
 
@@ -169,6 +169,29 @@ Then you will have to run `tuxctl` like this:
 
 :::
 
+**Managing license usage**
+
+To check if a server is already activated, you can run `tuxctl` and check for return code 0:
+
+```text
+# tuxctl -v
+Server is registered with token <blah>
+```
+
+Or if not registered you will get a return code 1:
+
+```text
+# tuxctl -v
+Server is not registered
+```
+
+If you are decommissioning a server and would like to de-register its license, you can run `tuxctl` like this and check for return code 0:
+
+```text
+# tuxctl -d
+De-registration successful
+```
+
 **Upgrading**
 
 ESU customers can upgrade between ESU releases, for example from 9.2 to 9.6 by editing the /etc/dnf/vars/tuxcare_releasever file to specify the new version, like so:
@@ -176,57 +199,6 @@ ESU customers can upgrade between ESU releases, for example from 9.2 to 9.6 by e
 ```text
 # echo 9.6 > /etc/dnf/vars/tuxcare_releasever
 # dnf upgrade
-```
-
-### Enabling FIPS 140-3 mode
-
-:::warning
-Note that Rocky Linux 9.6 is a *vendor-affirmed OE* and has not been through the same FIPS lab testing as AlmaLinux, however the FIPS *modules* are the exact same packages used for both operating systems.
-:::
-
-First please ensure you have installed the `tuxcare-release` package as described above. If you haven't already registered your ESU license using `tuxctl` the next step will also do that for you.
-
-To install the FIPS 140-3 validated ESU packages over the default ones and enable FIPS mode, please run these commands as root:
-
-```text
-# dnf -y upgrade
-# fips-mode-setup --enable
-# reboot
-```
-
-If you wish to only boot into the Active FIPS-validated kernel and not the security patched kernels or updates under CMVP review (only required in very high classification environments) you can use grubby like so:
-
-```text
-# dnf -y install kernel-5.14.0-284.11.1.el9_2.tuxcare.6
-# grubby --set-default=/boot/vmlinuz-5.14.0-284.11.1.el9_2.tuxcare.6.$(uname -i)
-```
-
-:::warning
-Note the aarch64 platform doesn't currently have FIPS-validated gnutls/libgcrypt/nss packages, only kernel and openssl for AlmaLinux 9.2
-
-We also provide multilib i686 packages of the userspace modules in the x86_64 repo for backwards compatibility, note that these are not FIPS-validated but are built from the same source.
-:::
-
-Once you've logged in after the reboot, you can run these commands to confirm it worked (note the versions may be slightly different by the time you read this, see [version table](https://tuxcare.com/fips-for-almalinux/)):
-
-```text
-$ fips-mode-setup --check
-FIPS mode is enabled.
-
-$ update-crypto-policies --show
-FIPS
-
-$ update-crypto-policies --check
-The configured policy matches the generated policy
-
-$ uname -r
-5.14.0-284.1101.el9_2.tuxcare.7.x86_64
-
-$ openssl list -providers | grep -A3 fips
-  fips
-    name: OpenSSL FIPS Provider for AlmaLinux 9
-    version: 3.0.7-1d2bd88ee26b3c90
-    status: active
 ```
 
 ### Uninstalling tuxctl
@@ -284,6 +256,244 @@ Then run the following:
 # dnf remove kernel*tuxcare*
 # dnf upgrade
 ```
+
+### Enabling FIPS 140-3 mode
+
+:::warning
+Note that Rocky Linux 9.6 is a *vendor-affirmed OE* and has not been through the same FIPS lab testing as AlmaLinux, however the FIPS *modules* are the exact same packages used for both operating systems.
+:::
+
+First please ensure you have installed the `tuxcare-release` package as described above. If you haven't already registered your ESU license using `tuxctl` the next step will also do that for you.
+
+To install the FIPS 140-3 validated ESU packages over the default ones and enable FIPS mode, please run these commands as root:
+
+```text
+# dnf -y upgrade
+# fips-mode-setup --enable
+# reboot
+```
+
+If you wish to only boot into the Active FIPS-validated kernel and not the security patched kernels or updates under CMVP review (only required in very high classification environments) you can use grubby like so:
+
+```text
+# dnf -y install kernel-5.14.0-284.11.1.el9_2.tuxcare.6
+# grubby --set-default=/boot/vmlinuz-5.14.0-284.11.1.el9_2.tuxcare.6.$(uname -i)
+```
+
+:::warning
+Note the aarch64 platform doesn't currently have FIPS-validated gnutls/libgcrypt/nss packages, only kernel and openssl for AlmaLinux 9.2
+
+We also provide multilib i686 packages of the userspace modules in the x86_64 repo for backwards compatibility, note that these are not FIPS-validated but are built from the same source.
+:::
+
+Once you've logged in after the reboot, you can run these commands to confirm it worked (note the versions may be slightly different by the time you read this, see [version table](https://tuxcare.com/fips-for-almalinux/)):
+
+```text
+$ fips-mode-setup --check
+FIPS mode is enabled.
+
+$ update-crypto-policies --show
+FIPS
+
+$ update-crypto-policies --check
+The configured policy matches the generated policy
+
+$ uname -r
+5.14.0-284.1101.el9_2.tuxcare.7.x86_64
+
+$ openssl list -providers | grep -A3 fips
+  fips
+    name: OpenSSL FIPS Provider for AlmaLinux 9
+    version: 3.0.7-1d2bd88ee26b3c90
+    status: active
+```
+
+### NSS-FIPS and Java crypto APIs
+
+#### Java crypto
+
+Java has a fully abstract crypto API with a pluggable cryptographic implementation organized into
+crypto Providers. Providers, as the name suggests, provide implementations for various crypto
+algorithms. The providers are loaded using JRE's configuration, either system-wide or per
+deployment, or can be loaded at application runtime.
+
+The order of available crypto providers is important as methods such as
+Cipher.getInstance(algorithm) without specifying the exact provider name (through second
+parameter) will return a matching implementation from the first provider that implements that
+crypto mechanism.
+
+Some providers, like one of the default JDK providers – SunJCE – provide only the basic crypto
+primitives. Others - like SunJSSE – provide higher level operations that rely on crypto primitives
+implemented by other providers. Those operations are, for instance, those being part of TLS or
+X509 standards in order to handle transport layer security or public key infrastructure.
+
+#### FIPS compliant implementations
+
+In order to use FIPS compliant and FIPS certified implementations of cryptographic mechanisms
+the application should use a crypto provider that interfaces with a concrete implementation certified
+to be FIPS compliant. Many 3rd party applications or libraries (packages) rely on the Provider
+infrastructure and cede the choice of crypto implementations to the app/system maintainer.
+
+Therefore in most cases the deployer – likely a sysadmin or devops – is free to choose an
+appropriate set of crypto providers for the application.
+
+OpenJDK for instance allows for configuring a PKCS11 provider which can interface with a native,  
+system-wide crypto library – NSS and its PKCS11 implementation – libsoftokn3.so. This
+implementation by tuxcare is FIPS compliant.
+
+An alternative PKCS11 implementation is SoftHSM which uses OpenSSL underneath. However,
+the cryptographic boundary is slightly shifted here. libsoftokn3 with NSS is FIPS certified while
+softhsm library alone is not, although the underlying openssl is.
+
+There are also alternative ways to interface with other system wide, FIPS compliant, native libs
+such as OpenSSL however this would need extra effort to build and maintain other, 3rd party
+providers, that are not readily available in the package repos and would have to be provided by the
+maintainer of the end application.
+
+#### Java's crypto API diagram
+
+![Java Crypto Providers](/images/providers.webp)
+
+#### SunPKCS11 provider
+
+SunPKCS11 is a provider which interfaces, through JNI, with a native implementation that exposes
+a PKCS11 crypto API, typically called a "token". Typically that would mean a hardware token – a
+device that implements crypto operations and exposes a PKCS11 interface through a "driver" being
+a native shared library.
+
+#### NSS-FIPS implementation
+
+NSS-FIPS implementation acts as a software token. It provides a PKCS11 interface like any USB
+crypto token, a HSM or a smart card would, but the actual implementation is provided in software
+using libnss3.
+
+#### JSSE
+
+JSSE provides TLS and PKI implementations and, if the provider set is properly configured, would
+have to rely on cryptographic primitives provided by NSS-FIPS.
+
+#### Alternative providers
+
+So far NSS is the only crypto library that alone provides an "upwards-facing" PKCS11 API and
+thus can be easily and seamlessly incorporated into a Java software solution. Other means include
+using:
+
+* softHSM
+
+  Which is also a PKCS11 provider and relies on OpenSSL underneath, however, it doesn't itself fall
+  within a FIPS cryptographic boundary of the system deliverables.
+
+* conscrypt
+
+  However, conscrypt became problematic to maintain having been hardwired to boringSSL by
+  Google. Even though boringssl essentially has the same API as OpenSSL, conscrypt would require
+  extra maintenance and as such is not provided as an AlmaLinux package.
+
+* openssl-fips-java
+
+  Maintained by Canonical but not available as a package (even in Ubuntu), this provider can be built
+  to interface with the FIPS implementation of OpenSSL.
+
+#### PKCS11-NSS-FIPS setup
+
+As shown on the diagram, a PKCS11 provider needs to be configured in order to work with Java
+crypto. A HSM or smart card would require a driver in form of a shared library.
+
+For NSS specifically – OpenJDK provides several shorthand configuration attributes.
+
+The configuration can either be done in the application's Java code by passing the config as a String  
+argument or through environment or system-wide via configuration files.
+
+#### System-wide config files
+
+* `(...)/security/java.security`
+
+  This file specifies the provider list and the order of providers. In non-fips mode this file will contain  
+  the following:
+
+  ```text
+  security.provider.N=SunPKCS11 ${java.home}/lib/security/nss.cfg
+  ```
+
+  while in FIPS mode:
+
+  ```text
+  fips.provider.1=SunPKCS11 ${java.home}/conf/security/nss.fips.cfg
+  ```
+
+  Both directives configure a SunPKCS11 provider and point to the provider-specific configuration
+  files
+
+* `(...)/security/nss.fips.cfg`
+
+  ```text
+  name = NSS-FIPS
+  ```
+
+  The name which will be appended to "SunPKCS11-" identifying the configured provider
+
+  Followed by nss-specific directives
+
+  ```text
+  nssLibraryDirectory = /usr/lib64
+  nssSecmodDirectory = ${fips.nssdb.path}
+  nssDbMode = readWrite
+  nssModule = fips
+  ```
+
+  Instead of providing a full path to the NSS shared lib one needs only to point to a library directory
+  containing NSS libraries.
+
+#### SoftHSM configuration
+
+The configuration of SoftHSM includes
+
+* setting up a config file. If the Java app is used in non-root context (as it probably is) then the
+config file needs to be user accessible and SOFTHSM2_CONF environment variable must point to
+it.
+* a keystore needs to be set up in the config file
+* a SoftHSM "token" needs to be created within the keystore directory. It must be PIN protected,
+therefore
+* in order to use crypto primitves Java application needs to instantiate SoftHSM KeyStore object
+and .init() it with the PIN.
+
+#### Limiting non-FIPS algorithm implementations
+
+Neither PKCS11 alone, nor NSS, does prevent library users from instantiating and using FIPS
+unapproved algorithms. Application developers are also free to include any code within their
+applications, including FIPS unapproved cryptographic algorithms in cryptographic context, or
+using FIPS unapproved algos, like SHA-1 in non-cryptographic contexts, like file checksums or
+lookup hashes.
+
+NSS implements a notion of a FIPS indicator which allows the application's implementer to decide
+what to do with a FIPS unapproved algorithms. Unlike openssl which bluntly fails if a non-fips
+operation is requested.
+
+The caveat – NSS's PKCS11 API does not provide a facility for querying the indicator as there can
+be no such facility within PKCS11.
+
+#### disabledAlgorithms directive
+
+Certain algorithms from NSS (or any other PKCS11 provider) can be blacklisted in the provider's
+config file (or by other means of configuring PKCS11). For instance DES based cipher mechanisms  
+can be explicitly blocked using
+
+```text
+disabledMechanisms = {
+        CKM_DES_ECB
+        CKM_DES_ECB_ENCRYPT_DATA
+        CKM_DES3_ECB
+        CKM_DES3_ECB_ENCRYPT_DATA
+        CKM_DES_CBC
+        CKM_DES_CBC_ENCRYPT_DATA
+        CKM_DES_CBC_PAD
+        CKM_DES3_CBC
+        CKM_DES3_CBC_ENCRYPT_DATA
+        CKM_DES3_CBC_PAD
+}
+```
+
+The above will not even appear on the mechanism list for this provider.
 
 ### Migrating from CentOS
 
@@ -541,10 +751,24 @@ cat /etc/rocky-release
 Rocky Linux release 9.6 (Blue Onyx)
 ```
 
-You can browse [https://repo.tuxcare.com/tuxcare/](https://repo.tuxcare.com/tuxcare/) and find the correct RPM, or you can figure it out by substituting the version number (8.8, 8.10, 9.2, 9.4, 9.5, 9.6, 9.7, 10.0 or 10.1) then install it as root, for example:
+You can browse [https://repo.tuxcare.com/tuxcare/](https://repo.tuxcare.com/tuxcare/) and find the correct RPM, or you can figure it out by substituting the version number (8.8, 8.10, 9.2, 9.4, 9.5, 9.6, 9.7, 10.0 or 10.1) then install it as root, for example, choose one of these:
+
+For 8.10:
 
 ```text
 # dnf -y install https://repo.tuxcare.com/tuxcare/tuxcare-release-latest-8.10.noarch.rpm
+```
+
+For 9.7:
+
+```text
+# dnf -y install https://repo.tuxcare.com/tuxcare/tuxcare-release-latest-9.7.noarch.rpm
+```
+
+For 10.1:
+
+```text
+# dnf -y install https://repo.tuxcare.com/tuxcare/tuxcare-release-latest-10.1.noarch.rpm
 ```
 
 :::warning
@@ -555,13 +779,6 @@ The second step is to activate your license on the system. You should run the `t
 
 ```text
 # tuxctl --license-key XXXXXXXXXX
-```
-
-Essential Support customers can upgrade to a new minor version, for example from 9.6 to 9.7 by editing the /etc/dnf/vars/tuxcare_releasever file to specify the new version, like so:
-
-```text
-# echo 9.7 > /etc/dnf/vars/tuxcare_releasever
-# dnf upgrade
 ```
 
 :::warning
@@ -579,3 +796,35 @@ dnf config-manager --set-disabled tuxcare-esu
 
 ESU customers can find instructions [above](/enterprise-support-for-almalinux/#installing-tuxctl)
 :::
+
+**Managing license usage**
+
+To check if a server is already activated, you can run `tuxctl` and check for return code 0:
+
+```text
+# tuxctl -v
+Server is registered with token <blah>
+```
+
+Or if not registered you will get a return code 1:
+
+```text
+# tuxctl -v
+Server is not registered
+```
+
+If you are decommissioning a server and would like to de-register its license, you can run `tuxctl` like this and check for return code 0:
+
+```text
+# tuxctl -d
+De-registration successful
+```
+
+**Upgrading**
+
+Essential Support customers can upgrade to a new minor version, for example from 9.6 to 9.7 by editing the /etc/dnf/vars/tuxcare_releasever file to specify the new version, like so:
+
+```text
+# echo 9.7 > /etc/dnf/vars/tuxcare_releasever
+# dnf upgrade
+```

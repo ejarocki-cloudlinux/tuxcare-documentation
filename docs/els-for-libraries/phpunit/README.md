@@ -4,70 +4,143 @@ Endless Lifecycle Support (ELS) for PHPUnit from TuxCare provides security fixes
 
 ## Supported Versions
 
-* **PHPUnit** 12.4.5
+* **PHPUnit** 6.5.14, 7.5.20, 8.4.3, 9.5.28, 10.4.2, 11.4.4, 12.4.5
 
 Other versions upon request.
 
-## Connection to ELS for PHPUnit Repository
+## Installation
 
-This guide outlines the steps needed to integrate the TuxCare ELS for PHPUnit repository into your application. The repository provides trusted PHPUnit packages that can be easily integrated into your **Composer** projects.
+<ELSPrerequisites>
 
-### Step 1: Get user credentials
+* Nexus repository access credentials (username and password) — contact [sales@tuxcare.com](mailto:sales@tuxcare.com)
+* To browse available artifacts, visit TuxCare [Nexus](https://nexus.repo.tuxcare.com/#browse/browse:els_php) and click Sign in in the top right corner. You may need to refresh the page after logging in.
 
-You need a username and password in order to use TuxCare ELS for PHPUnit repository. Anonymous access is disabled. To receive the credentials, please contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+</ELSPrerequisites>
 
-### Step 2: Configure Composer authentication
+<ELSSteps>
 
-1. Create or edit the `auth.json` file for the user running Composer:
+1. Locate the `auth.json` file
 
-    * **Linux/macOS**: 
+   Composer reads credentials from a per-user `auth.json`. Create or edit the file at:
 
-        ```text
-        ~/.composer/auth.json
-        ```
+   * **Linux/macOS**: 
+     
+     ```
+     ~/.composer/auth.json
+     ```
 
-    * **Windows**: 
+   * **Windows**:
+   
+     ```
+     %APPDATA%\Composer\auth.json
+     ```
 
-        ```text
-        %APPDATA%\Composer\auth.json
-        ```
+2. Add your TuxCare credentials
 
-2. Use either the Composer CLI or edit `auth.json` directly to add your credentials for `nexus.repo.tuxcare.com`.
+   Use either the Composer CLI or edit `auth.json` directly to add credentials for `nexus.repo.tuxcare.com`:
 
    <CodeTabs :tabs="[
      { title: 'Composer CLI', content: `composer config --global --auth http-basic.nexus.repo.tuxcare.com USERNAME PASSWORD` },
      { title: 'auth.json', content: authjson }
    ]" />
 
-   Replace `USERNAME` and `PASSWORD` with the credentials you received in [Step 1](#step-1-get-user-credentials).
+   Replace `USERNAME` and `PASSWORD` with the credentials provided by TuxCare.
 
-### Step 3: Register the TuxCare repository
+3. Register the TuxCare repository
 
-Add the `els_php` Composer repository either via CLI or by editing `composer.json`:
+   Add the `els_php` Composer repository either via CLI or by editing `composer.json`:
 
-  <CodeTabs :tabs="[
-    { title: 'Composer CLI', content: cli },
-    { title: 'composer.json', content: composerjson }
-  ]" />
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: cli },
+     { title: 'composer.json', content: composerjson }
+   ]" />
 
-### Step 4: Install PHPUnit
+4. Install PHPUnit
 
-Install the TuxCare-maintained PHPUnit release that matches your project:
+   Install the TuxCare-maintained PHPUnit release that matches your project:
 
-<CodeTabs :tabs="[
-  { title: 'Composer CLI', content: `composer require sebastianbergmann/phpunit:12.4.5-p1+tuxcare` },
-  { title: 'composer.json', content: phpunitjson }
-]" />
+   <TableTabs label="Choose version: " >
 
-**Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
+   <template #PHPUnit_6.5>
 
-If you edited `composer.json` manually, run `composer update` to install the package:
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require phpunit/phpunit:6.5.14-p1+tuxcare` },
+     { title: 'composer.json', content: phpunitjson65 }
+   ]" />
 
-```text
-composer update
-```
+   </template>
 
-Composer will resolve dependencies against the TuxCare repository and install the patched releases.
+   <template #PHPUnit_7.5>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require phpunit/phpunit:7.5.20-p1+tuxcare` },
+     { title: 'composer.json', content: phpunitjson75 }
+   ]" />
+
+   </template>
+
+   <template #PHPUnit_8.4>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require phpunit/phpunit:8.4.3-p1+tuxcare` },
+     { title: 'composer.json', content: phpunitjson84 }
+   ]" />
+
+   </template>
+
+   <template #PHPUnit_9.5>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require phpunit/phpunit:9.5.28-p1+tuxcare` },
+     { title: 'composer.json', content: phpunitjson95 }
+   ]" />
+
+   </template>
+
+   <template #PHPUnit_10.4>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require phpunit/phpunit:10.4.2-p1+tuxcare` },
+     { title: 'composer.json', content: phpunitjson104 }
+   ]" />
+
+   </template>
+
+   <template #PHPUnit_11.4>
+
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require phpunit/phpunit:11.4.4-p1+tuxcare` },
+     { title: 'composer.json', content: phpunitjson114 }
+   ]" />
+
+   </template>
+
+   <template #PHPUnit_12.4>
+ 
+   <CodeTabs :tabs="[
+     { title: 'Composer CLI', content: `composer require phpunit/phpunit:12.4.5-p1+tuxcare` },
+     { title: 'composer.json', content: phpunitjson124 }
+   ]" />
+
+   </template>
+
+   </TableTabs>
+
+   **Check the exact version listed in your TuxCare Nexus account to ensure you receive the most recent patched release.**
+
+   :::tip
+
+   If you edited `composer.json` manually, run `composer update` to install the package:
+   
+   ```
+   composer update
+   ```
+   
+   Composer will resolve dependencies against the TuxCare repository and install the patched releases.
+
+   :::
+
+</ELSSteps>
 
 ### Composer Repository Configuration
 
@@ -93,43 +166,79 @@ it usually means your project requires a package version that is not yet availab
 
 This allows Composer to fall back to Packagist for packages not available in the TuxCare repository, while still preferring TuxCare patches when available.
 
-## Vulnerability Exploitability eXchange (VEX)
-
-VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives and helps prioritize real risks.
-
-TuxCare provides VEX for PHPUnit ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_php/sebastianbergmann-phpunit/](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/sebastianbergmann-phpunit/)
-
-## How to Upgrade to a Newer Version
-
-If you have already installed a TuxCare PHPUnit package and want to upgrade to a newer release, update the version string in your `composer.json` file or run the `composer require` command with the new version:
-
-```text
-composer require sebastianbergmann/phpunit:VERSION-pN+tuxcare
-```
-
-Then run `composer update` to apply the changes:
-
-```text
-composer update
-```
-
-## Resolved CVEs
+## Resolved CVEs in PHPUnit
 
 Fixes for the following vulnerabilities are available in ELS for PHPUnit from TuxCare:
 
 <TableTabs label="Choose PHPUnit version: ">
 
+<template #PHPUnit_6.5>
+
+| CVE ID         | Severity | Vulnerable versions | Fixed in version    |
+|----------------|----------|---------------------|---------------------|
+| CVE-2026-24765 | High     | 6.5.14              | 6.5.14-p1+tuxcare   |
+
+</template>
+
+<template #PHPUnit_7.5>
+
+| CVE ID         | Severity | Vulnerable versions | Fixed in version    |
+|----------------|----------|---------------------|---------------------|
+| CVE-2026-24765 | High     | 7.5.20              | 7.5.20-p1+tuxcare   |
+
+</template>
+
+<template #PHPUnit_8.4>
+
+| CVE ID         | Severity | Vulnerable versions | Fixed in version    |
+|----------------|----------|---------------------|---------------------|
+| CVE-2026-24765 | High     | 8.4.3               | 8.4.3-p1+tuxcare    |
+
+</template>
+
+<template #PHPUnit_9.5>
+
+| CVE ID         | Severity | Vulnerable versions | Fixed in version    |
+|----------------|----------|---------------------|---------------------|
+| CVE-2026-24765 | High     | 9.5.28              | 9.5.28-p1+tuxcare   |
+
+</template>
+
+<template #PHPUnit_10.4>
+
+| CVE ID         | Severity | Vulnerable versions | Fixed in version    |
+|----------------|----------|---------------------|---------------------|
+| CVE-2026-24765 | High     | 10.4.2              | 10.4.2-p1+tuxcare   |
+
+</template>
+
+<template #PHPUnit_11.4>
+
+| CVE ID         | Severity | Vulnerable versions | Fixed in version    |
+|----------------|----------|---------------------|---------------------|
+| CVE-2026-24765 | High     | 11.4.4              | 11.4.4-p1+tuxcare   |
+
+</template>
+
 <template #PHPUnit_12.4>
 
-| CVE ID         | Severity | Vulnerable versions | Fixed in version       |
-|----------------|----------|---------------------|------------------------|
-| CVE-2026-24765 | High     | 12.4.5              | 12.4.5-p1+tuxcare     |
+| CVE ID         | Severity | Vulnerable versions | Fixed in version    |
+|----------------|----------|---------------------|---------------------|
+| CVE-2026-24765 | High     | 12.4.5              | 12.4.5-p1+tuxcare   |
 
 </template>
 
 </TableTabs>
 
-If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+## What's Next?
+
+<WhatsNext hide-title>
+
+* ![](/images/shield-alert.webp) [VEX feed](https://security.tuxcare.com/vex/cyclonedx/els_lang_php/sebastianbergmann/phpunit/) — Vulnerability Exploitability eXchange feed
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/) — Track vulnerability fixes and updates
+* ![](/images/wrench.webp) [Managing the ELS repository](/els-for-libraries/managing-els-repository/) — Upgrade to a newer version
+
+</WhatsNext>
 
 <script setup>
 
@@ -161,10 +270,52 @@ const composerjson =
 const cli =
 `composer config repositories.tuxcare '{"type":"composer","url":"https://nexus.repo.tuxcare.com/repository/els_php/","options":{"http":{"verify":true}}}' --json`
 
-const phpunitjson =
+const phpunitjson65 =
 `{
     "require": {
-        "sebastianbergmann/phpunit": "12.4.5-p1+tuxcare"
+        "phpunit/phpunit": "6.5.14-p1+tuxcare"
+    }
+}`
+
+const phpunitjson75 =
+`{
+    "require": {
+        "phpunit/phpunit": "7.5.20-p1+tuxcare"
+    }
+}`
+
+const phpunitjson84 =
+`{
+    "require": {
+        "phpunit/phpunit": "8.4.3-p1+tuxcare"
+    }
+}`
+
+const phpunitjson95 =
+`{
+    "require": {
+        "phpunit/phpunit": "9.5.28-p1+tuxcare"
+    }
+}`
+
+const phpunitjson104 =
+`{
+    "require": {
+        "phpunit/phpunit": "10.4.2-p1+tuxcare"
+    }
+}`
+
+const phpunitjson114 =
+`{
+    "require": {
+        "phpunit/phpunit": "11.4.4-p1+tuxcare"
+    }
+}`
+
+const phpunitjson124 =
+`{
+    "require": {
+        "phpunit/phpunit": "12.4.5-p1+tuxcare"
     }
 }`
 

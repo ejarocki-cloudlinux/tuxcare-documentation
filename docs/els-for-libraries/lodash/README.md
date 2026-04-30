@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Lodash from TuxCare provides security fixes 
 
 ## Supported Lodash Versions
 
-* Lodash 3.10.1, 4.5.0, 4.17.x
+* Lodash 1.3.1, 2.4.2, 3.2.0, 3.10.1, 4.5.0, 4.17.15, 4.17.19
 
 ## Connection to ELS for Lodash Library
 
@@ -35,8 +35,8 @@ TuxCare provides ELS for Lodash as an NPM package, hosted on a secure internal r
 
    ```text
    registry=https://registry.npmjs.org/
-   @els-js:registry=https://nexus.repo.tuxcare.com/repository/els-js/
-   //nexus.repo.tuxcare.com/repository/els-js/:_auth=${TOKEN}
+   @els-js:registry=https://nexus.repo.tuxcare.com/repository/els_js/
+   //nexus.repo.tuxcare.com/repository/els_js/:_auth=${TOKEN}
    ```
 
    :::warning
@@ -50,6 +50,45 @@ TuxCare provides ELS for Lodash as an NPM package, hosted on a secure internal r
      Manually update your `package.json` file by replacing your Lodash dependencies with the TuxCare packages. This method gives you full control over which packages to update.
 
      <TableTabs label="Choose Lodash version: " >
+
+      <template #Lodash_1.3.1>
+
+      ```text
+      "dependencies": {
+        "lodash": "npm:@els-js/lodash@>=1.3.1-tuxcare.1"
+      },
+      "overrides": {
+        "lodash@1.3.1": "npm:@els-js/lodash@>=1.3.1-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+      <template #Lodash_2.4.2>
+
+      ```text
+      "dependencies": {
+        "lodash": "npm:@els-js/lodash@>=2.4.2-tuxcare.1"
+      },
+      "overrides": {
+        "lodash@2.4.2": "npm:@els-js/lodash@>=2.4.2-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+      <template #Lodash_3.2.0>
+
+      ```text
+      "dependencies": {
+        "lodash": "npm:@els-js/lodash@>=3.2.0-tuxcare.1"
+      },
+      "overrides": {
+        "lodash@3.2.0": "npm:@els-js/lodash@>=3.2.0-tuxcare.1"
+      }
+      ```
+
+      </template>
 
       <template #Lodash_3.10.1>
 
@@ -163,6 +202,16 @@ VEX is a machine-readable format that tells you if a known vulnerability is actu
 
 TuxCare provides VEX for Lodash ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/lodash/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/lodash/).
 
+## Software Bill of Materials (SBOM)
+
+For each published ELS package and version, TuxCare generates SBOM files. Those artifacts are published to TuxCare Nexus.
+
+You can browse SBOM files for Lodash here:
+
+[https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom:lodash](https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom:lodash)
+
+Use the credentials you received for TuxCare ELS ([Step 1: Get Token](#step-1:-get-token)) to access Nexus.
+
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
 If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), remove node_modules, clear the npm cache to avoid conflicts, and then run the installation command:
@@ -178,6 +227,39 @@ Fixes for the following vulnerabilities are available in ELS for Lodash from Tux
 
 <TableTabs label="Choose Lodash version: " >
 
+  <template #Lodash__1.3.1>
+
+| CVE ID         | CVE Type | Severity |  Affected Libraries | Vulnerable Versions |
+| :------------: | :------: |:--------:| :-----------------: |:-------------------:|
+| CVE-2018-3721   | Direct   | Medium   | lodash             |      < 4.17.5       |
+| CVE-2018-16487  | Direct   | High     | lodash             |      < 4.17.11      |
+| CVE-2019-10744  | Direct   | Critical | lodash             |      < 4.17.12      |
+| CVE-2021-23337  | Direct   | High     | lodash             |      < 4.17.21      |
+
+  </template>
+
+  <template #Lodash__2.4.2>
+
+| CVE ID         | CVE Type | Severity |  Affected Libraries | Vulnerable Versions |
+| :------------: | :------: |:--------:| :-----------------: |:-------------------:|
+| CVE-2018-3721   | Direct   | Medium   | lodash             |      < 4.17.5       |
+| CVE-2018-16487  | Direct   | High     | lodash             |      < 4.17.11      |
+| CVE-2019-10744  | Direct   | Critical | lodash             |      < 4.17.12      |
+| CVE-2021-23337  | Direct   | High     | lodash             |      < 4.17.21      |
+
+  </template>
+
+  <template #Lodash__3.2.0>
+
+| CVE ID         | CVE Type | Severity |  Affected Libraries | Vulnerable Versions |
+| :------------: | :------: |:--------:| :-----------------: |:-------------------:|
+| CVE-2018-3721   | Direct   | Medium   | lodash             |      < 4.17.5       |
+| CVE-2018-16487  | Direct   | High     | lodash             |      < 4.17.11      |
+| CVE-2019-10744  | Direct   | Critical | lodash             |      < 4.17.12      |
+| CVE-2021-23337  | Direct   | High     | lodash             |      < 4.17.21      |
+
+  </template>
+
   <template #Lodash__4.5.0>
 
 | CVE ID         | CVE Type | Severity |  Affected Libraries | Vulnerable Versions |
@@ -190,7 +272,9 @@ Fixes for the following vulnerabilities are available in ELS for Lodash from Tux
 
 | CVE ID         | CVE Type | Severity |  Affected Libraries | Vulnerable Versions |
 | :------------: | :------: | :------: | :-----------------: |:-------------------:|
-| CVE-2020-8203  | Direct   | High   | Lodash             |      < 4.17.20      |
+| CVE-2020-8203   | Direct   | High     | lodash             |      < 4.17.20      |
+| CVE-2020-28500  | Direct   | Medium   | lodash             |      < 4.17.21      |
+| CVE-2021-23337  | Direct   | High     | lodash             |      < 4.17.21      |
 
   </template>
 

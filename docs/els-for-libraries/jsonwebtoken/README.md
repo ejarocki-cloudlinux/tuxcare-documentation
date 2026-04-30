@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for JSON Web Token from TuxCare provides securit
 
 ## Supported JSON Web Token Versions
 
-* JSON Web Token 0.4.0, 8.5.1
+* JSON Web Token 0.4.0, 0.4.1, 8.5.1
 
 ## Connection to ELS for JSON Web Token Library
 
@@ -35,8 +35,8 @@ TuxCare provides ELS for JSON Web Token as an NPM package, hosted on a secure in
 
    ```text
    registry=https://registry.npmjs.org/
-   @els-js:registry=https://nexus.repo.tuxcare.com/repository/els-js/
-   //nexus.repo.tuxcare.com/repository/els-js/:_auth=${TOKEN}
+   @els-js:registry=https://nexus.repo.tuxcare.com/repository/els_js/
+   //nexus.repo.tuxcare.com/repository/els_js/:_auth=${TOKEN}
    ```
 
    :::warning
@@ -59,6 +59,19 @@ TuxCare provides ELS for JSON Web Token as an NPM package, hosted on a secure in
       },
       "overrides": {
         "jsonwebtoken@0.4.0": "npm:@els-js/jsonwebtoken@>=0.4.0-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+      <template #JSON_Web_Token_0.4.1>
+
+      ```text
+      "dependencies": {
+        "jsonwebtoken": "npm:@els-js/jsonwebtoken@>=0.4.1-tuxcare.1"
+      },
+      "overrides": {
+        "jsonwebtoken@0.4.1": "npm:@els-js/jsonwebtoken@>=0.4.1-tuxcare.1"
       }
       ```
 
@@ -137,6 +150,16 @@ VEX is a machine-readable format that tells you if a known vulnerability is actu
 
 TuxCare provides VEX for JSON Web Token ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/jsonwebtoken/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/jsonwebtoken/).
 
+## Software Bill of Materials (SBOM)
+
+For each published ELS package and version, TuxCare generates SBOM files. Those artifacts are published to TuxCare Nexus.
+
+You can browse SBOM files for JSON Web Token (JWT) here:
+
+[https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom:jsonwebtoken](https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom:jsonwebtoken)
+
+Use the credentials you received for TuxCare ELS ([Step 1: Get Token](#step-1:-get-token)) to access Nexus.
+
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
 If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), remove node_modules, clear the npm cache to avoid conflicts, and then run the installation command:
@@ -153,6 +176,14 @@ Fixes for the following vulnerabilities are available in ELS for JSON Web Token 
 <TableTabs label="Choose JSON Web Token version: " >
 
 <template #JSON_Web_Token_0.4.0>
+
+| CVE ID         |  CVE Type  | Severity | Affected Libraries | Vulnerable Versions |
+| :------------: |:----------:|:--------:|:------------------:|:------------------:|
+| CVE-2015-9235  | Direct     | Critical | jsonwebtoken       | < 4.2.2            |
+
+  </template>
+
+<template #JSON_Web_Token_0.4.1>
 
 | CVE ID         |  CVE Type  | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: |:----------:|:--------:|:------------------:|:------------------:|

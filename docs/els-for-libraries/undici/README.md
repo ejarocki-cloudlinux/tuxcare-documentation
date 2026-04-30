@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for undici from TuxCare provides security fixes 
 
 ## Supported undici Versions
 
-* undici 5.28.5
+* undici 5.28.5, 5.29.0
 
 ## Connection to ELS for undici Library
 
@@ -35,8 +35,8 @@ TuxCare provides ELS for undici as an NPM package, hosted on a secure internal r
 
    ```text
    registry=https://registry.npmjs.org/
-   @els-js:registry=https://nexus.repo.tuxcare.com/repository/els-js/
-   //nexus.repo.tuxcare.com/repository/els-js/:_auth=${TOKEN}
+   @els-js:registry=https://nexus.repo.tuxcare.com/repository/els_js/
+   //nexus.repo.tuxcare.com/repository/els_js/:_auth=${TOKEN}
    ```
 
    :::warning
@@ -49,14 +49,35 @@ TuxCare provides ELS for undici as an NPM package, hosted on a secure internal r
 
      Manually update your `package.json` file by replacing your undici dependencies with the TuxCare packages. This method gives you full control over which packages to update.
 
-     ```text
-     "dependencies": {
-       "undici": "npm:@els-js/undici@>=5.28.5-tuxcare.1"
-     },
-     "overrides": {
-       "undici@5.28.5": "npm:@els-js/undici@>=5.28.5-tuxcare.1"
-     }
-     ```
+     <TableTabs label="Choose undici version: " >
+
+      <template #undici_5.28.5>
+
+      ```text
+      "dependencies": {
+        "undici": "npm:@els-js/undici@>=5.28.5-tuxcare.1"
+      },
+      "overrides": {
+        "undici@5.28.5": "npm:@els-js/undici@>=5.28.5-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+      <template #undici_5.29.0>
+
+      ```text
+      "dependencies": {
+        "undici": "npm:@els-js/undici@>=5.29.0-tuxcare.1"
+      },
+      "overrides": {
+        "undici@5.29.0": "npm:@els-js/undici@>=5.29.0-tuxcare.1"
+      }
+      ```
+
+      </template>
+
+     </TableTabs>
 
    * **Option 2: TuxCare Patcher (Automated)**
 
@@ -116,6 +137,16 @@ VEX is a machine-readable format that tells you if a known vulnerability is actu
 
 TuxCare provides VEX for undici ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/undici/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/undici/).
 
+## Software Bill of Materials (SBOM)
+
+For each published ELS package and version, TuxCare generates SBOM files. Those artifacts are published to TuxCare Nexus.
+
+You can browse SBOM files for undici here:
+
+[https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom:undici](https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom:undici)
+
+Use the credentials you received for TuxCare ELS ([Step 1: Get Token](#step-1:-get-token)) to access Nexus.
+
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
 If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), remove node_modules, clear the npm cache to avoid conflicts, and then run the installation command:
@@ -129,9 +160,25 @@ If you have already installed a package with a `tuxcare.1` suffix and want to up
 
 Fixes for the following vulnerabilities are available in ELS for undici from TuxCare versions:
 
+<TableTabs label="Choose undici version: " >
+
+<template #undici_5.28.5>
+
 | CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
 | :------------: | :------: |:--------:|:------------------:| :----------------: |
-| AIKIDO-2024-10065 | Direct   | Medium   | undici            | 4.4.0 - 6.14.1    |
+| CVE-2026-22036 | Direct   | High     | undici            | < 6.23.0, >= 7.0.0 < 7.18.2 |
+
+  </template>
+
+<template #undici_5.29.0>
+
+| CVE ID         | CVE Type | Severity | Affected Libraries | Vulnerable Versions |
+| :------------: | :------: |:--------:|:------------------:| :----------------: |
+| CVE-2026-22036 | Direct   | High     | undici            | < 6.23.0, >= 7.0.0 < 7.18.2 |
+
+  </template>
+
+</TableTabs>
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 

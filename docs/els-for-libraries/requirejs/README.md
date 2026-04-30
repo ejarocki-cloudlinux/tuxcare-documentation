@@ -35,8 +35,8 @@ TuxCare provides ELS for RequireJS as an NPM package, hosted on a secure interna
 
    ```text
    registry=https://registry.npmjs.org/
-   @els-js:registry=https://nexus.repo.tuxcare.com/repository/els-js/
-   //nexus.repo.tuxcare.com/repository/els-js/:_auth=${TOKEN}
+   @els-js:registry=https://nexus.repo.tuxcare.com/repository/els_js/
+   //nexus.repo.tuxcare.com/repository/els_js/:_auth=${TOKEN}
    ```
 
    :::warning
@@ -136,6 +136,16 @@ The `npm` tool should be able to identify and resolve dependencies from the TuxC
 VEX is a machine-readable format that tells you if a known vulnerability is actually exploitable in your product. It reduces false positives, helps prioritize real risks.
 
 TuxCare provides VEX for RequireJS ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/requirejs/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/requirejs/).
+
+## Software Bill of Materials (SBOM)
+
+For each published ELS package and version, TuxCare generates SBOM files. Those artifacts are published to TuxCare Nexus.
+
+You can browse SBOM files for RequireJS here:
+
+[https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom:requirejs](https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom:requirejs)
+
+Use the credentials you received for TuxCare ELS ([Step 1: Get Token](#step-1:-get-token)) to access Nexus.
 
 ## How to Upgrade to a Newer Version of TuxCare Packages
 

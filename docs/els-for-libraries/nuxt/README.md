@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for Nuxt from TuxCare provides security fixes fo
 
 ## Supported Nuxt Versions
 
-* Nuxt 0.10.7, 2.18.1, 3.2.0
+* Nuxt 0.10.7, 2.18.1
 
 ## Connection to ELS for Nuxt Library
 
@@ -35,8 +35,8 @@ TuxCare provides ELS for Nuxt as an NPM package, hosted on a secure internal reg
 
    ```text
    registry=https://registry.npmjs.org/
-   @els-js:registry=https://nexus.repo.tuxcare.com/repository/els-js/
-   //nexus.repo.tuxcare.com/repository/els-js/:_auth=${TOKEN}
+   @els-js:registry=https://nexus.repo.tuxcare.com/repository/els_js/
+   //nexus.repo.tuxcare.com/repository/els_js/:_auth=${TOKEN}
    ```
 
    :::warning
@@ -46,17 +46,6 @@ TuxCare provides ELS for Nuxt as an NPM package, hosted on a secure internal reg
 4. Update your `package.json` file to add the following overrides for the TuxCare packages:
 
    <TableTabs label="Choose Nuxt version: " >
-
-    <template #nuxt_3.2.0>
-
-    ```text
-    "overrides": {
-      "lodash.pick@4.4.0": "npm:@els-js/lodash.pick@>=4.4.0-tuxcare.1",
-      "lodash.template@4.5.0": "npm:@els-js/lodash.template@>=4.5.0-tuxcare.1"
-    }
-    ```
-
-    </template>
 
     <template #nuxt_2.18.1>
 
@@ -133,6 +122,16 @@ VEX is a machine-readable format that tells you if a known vulnerability is actu
 
 TuxCare provides VEX for Nuxt ELS versions: [security.tuxcare.com/vex/cyclonedx/els_lang_javascript/nuxt/](https://security.tuxcare.com/vex/cyclonedx/els_lang_javascript/nuxt/).
 
+## Software Bill of Materials (SBOM)
+
+For each published ELS package and version, TuxCare generates SBOM files. Those artifacts are published to TuxCare Nexus.
+
+You can browse SBOM files for Nuxt here:
+
+[https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom:nuxt](https://nexus.repo.tuxcare.com/#browse/browse:els-js-sbom:nuxt)
+
+Use the credentials you received for TuxCare ELS ([Step 1: Get Token](#step-1:-get-token)) to access Nexus.
+
 ## How to Upgrade to a Newer Version of TuxCare Packages
 
 If you have already installed a package with a `tuxcare.1` suffix and want to upgrade to a newer release (for example, `tuxcare.3`), remove node_modules, clear the npm cache to avoid conflicts, and then run the installation command:
@@ -148,19 +147,11 @@ Fixes for the following vulnerabilities are available in ELS for Nuxt from TuxCa
 
 <TableTabs label="Choose Nuxt version: " >
 
-<template #nuxt_3.2.0>
-
-|    CVE ID     | CVE Type  | Severity | Affected Libraries | Vulnerable Versions |
-|:-------------:|:---------:|:--------:|:------------------:|:-------------------:|
-| CVE-2020-8203 | Transitive | High     | lodash.pick        | >= 4.0.0 <= 4.4.0   |
-| CVE-2021-23337 | Transitive | High     | lodash.template    | <= 4.5.0            |
-
-</template>
-
 <template #nuxt_2.18.1>
 
 |    CVE ID     | CVE Type  | Severity | Affected Libraries | Vulnerable Versions |
 |:-------------:|:---------:|:--------:|:------------------:|:-------------------:|
+| CVE-2024-34343 | Direct | Medium   | nuxt               |       < 3.12.4      |
 | CVE-2024-4068 | Transitive | High     | braces             |       < 3.0.3       |
 | CVE-2024-47764 | Transitive | Medium   | cookie             |       < 0.7.0       |
 | CVE-2025-57820 | Transitive | High     | devalue            |       < 5.3.2       |
@@ -178,6 +169,7 @@ Fixes for the following vulnerabilities are available in ELS for Nuxt from TuxCa
 
 |    CVE ID     | CVE Type  | Severity | Affected Libraries | Vulnerable Versions |
 |:-------------:|:---------:|:--------:|:------------------:|:-------------------:|
+| CVE-2024-34343 | Direct | Medium   | nuxt               |       < 3.12.4      |
 | CVE-2020-7608 | Transitive | Medium   | yargs-parser | < 5.0.1, >= 6.0.0 < 13.1.2, >= 14.0.0 < 15.0.1 |
 | CVE-2024-37890 | Transitive | High     | ws | < 5.2.4, >= 6.0.0 < 6.2.3, >= 7.0.0 < 7.5.10, >= 8.0.0 < 8.17.1 |
 | CVE-2024-29180 | Transitive | High     | webpack-dev-middleware | < 5.3.4, >= 6.0.0 < 6.1.2, >= 7.0.0 < 7.1.0 |
@@ -206,4 +198,3 @@ Fixes for the following vulnerabilities are available in ELS for Nuxt from TuxCa
 </TableTabs>
 
 If you are interested in the TuxCare Endless Lifecycle Support, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
-

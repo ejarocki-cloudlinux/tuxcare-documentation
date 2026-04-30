@@ -13,13 +13,13 @@
 
 <ELSSteps>
 
-1. Download the install script:
+1. Download the install script
 
    ```
    wget https://repo.tuxcare.com/oraclelinux7-els/install-oraclelinux7-els-repo.sh
    ```
 
-2. Run with your license key.
+2. Run with your license key
 
    The script registers the server in the CLN with the key, adds a PGP key to the server.
 
@@ -27,7 +27,7 @@
    sh install-oraclelinux7-els-repo.sh --license-key XXXXXXXX
    ```
 
-3. Verify that the installation was successful by running the following command:
+3. Verify that the installation was successful by running the following command
 
    ```
    yum info els-define
@@ -62,13 +62,13 @@
 The installation script **does not automatically add** the TuxCare UEKR6 repository. If you plan to use the `kernel-uek` package on your Oracle Linux 7 system, you need to enable the TuxCare UEKR6 repository manually.
 <ELSSteps>
 
-1. Use an editor of your choice to edit the `/etc/yum.repos.d/oraclelinux7-els.repo` file:
+1. Use an editor of your choice to edit the `/etc/yum.repos.d/oraclelinux7-els.repo` file
 
    ```
    vi /etc/yum.repos.d/oraclelinux7-els.repo
    ```
 
-2. Add the following lines there to enable the TuxCare UEKR 6 repository:
+2. Add the following lines there to enable the TuxCare UEKR 6 repository
 
    ```
    [oraclelinux7-els-UEKR6]
@@ -78,15 +78,15 @@ The installation script **does not automatically add** the TuxCare UEKR6 reposit
    ```
 </ELSSteps>
 
-## What's next?
+## What's Next?
 
 <WhatsNext hide-title>
 
 * ![](/images/shield-alert.webp) [OVAL](https://security.tuxcare.com/oval/els_os/oraclelinux7els/oval.xml) — OVAL security data
 * ![](/images/unlock-alt.webp) [CSAF](https://security.tuxcare.com/csaf/v2/els_os/oraclelinux7els/) — CSAF security advisories
-* ![](/images/eye.webp) [RSS](https://cve.tuxcare.com/rss_feed/els/releases/oraclelinux7els) — Release notifications
+* ![](/images/eye.webp) [CVE Tracker](https://tuxcare.com/cve-tracker/?product=Oracle+Linux+7+ELS) — Track vulnerability fixes and updates
 * ![](/images/shield.webp) [Machine-Readable Security Data](/els-for-os/machine-readable-security-data/) — Errata, OVAL, CSAF
-* ![](/images/box.webp) [Supported packages list](https://cve.tuxcare.com/els/projects?os=b577e8d3-7a54-4fd9-80d1-04b2222621f7&project=&version=&packages=&orderBy=project-asc) — Full list of packages covered by ELS
+* ![](/images/box.webp) [Supported packages list](https://tuxcare.com/cve-tracker/products/?product=Oracle+Linux+7+ELS) — Full list of packages covered by ELS
 * ![](/images/wrench.webp) [Managing the ELS repository](/els-for-os/managing-els-repository/) — Updates, local mirror, and other repository operations
 
 </WhatsNext>

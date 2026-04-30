@@ -36,7 +36,7 @@ alt-php provides a more flexible and convenient environment for working with dif
 | Debian                                                                   | DEB          | 10, 11, 12, 13                    |
 | Windows                                                                  | -            | Windows Server 2019, 2022, 2025   |
 
-**For supported PHP versions, see [cve.tuxcare.com](https://cve.tuxcare.com/els-alt-php/projects).**
+**For supported PHP versions, see [tuxcare.com/cve-tracker](https://tuxcare.com/cve-tracker/).**
 
 **Supported architecture:** x86_64 (64-bit) on Linux
 
@@ -995,7 +995,9 @@ The PHP core includes many built-in extensions that provide basic functionality,
 
 </TableTabs>
 
-<WhatsNext>
+## What's Next?
+
+<WhatsNext hide-title>
 
 * ![](/images/shield.webp) [Machine-readable security data](../machine-readable-security-data/) — OVAL, CSAF, Errata, and RSS feeds for PHP ELS
 * ![](/images/clipboard-notes.webp) [PHP Changelog](https://changelog.cloudlinux.com/) — latest updates, fixes, and enhancements for ALT-PHP
