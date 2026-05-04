@@ -159,21 +159,21 @@ Fixes for the following vulnerabilities are available in ELS for Python Librarie
 
 | CVE ID              | Severity | Vulnerable Versions | Safe Version        |
 | :-----------------: | :------: | :-----------------: | :-----------------: |
-| CVE-2026-34520      | Critical | 3.8.4               | 3.8.4.post2+tuxcare |
-| CVE-2026-34520      | Critical | 3.8.5               | 3.8.5.post6+tuxcare |
-| CVE-2026-34520      | Critical | 3.8.6               | 3.8.6.post3+tuxcare |
-| CVE-2026-34516      | High     | 3.8.4               | 3.8.4.post2+tuxcare |
-| CVE-2026-34516      | High     | 3.8.5               | 3.8.5.post5+tuxcare |
-| CVE-2026-34516      | High     | 3.8.6               | 3.8.6.post4+tuxcare |
-| CVE-2026-34513      | High     | 3.8.1               | 3.8.1.post8+tuxcare |
-| CVE-2026-34513      | High     | 3.8.4               | 3.8.4.post2+tuxcare |
-| CVE-2026-34513      | High     | 3.8.6               | 3.8.6.post4+tuxcare |
-| CVE-2026-22815      | High     | 3.8.6               | 3.8.6.post4+tuxcare |
-| CVE-2026-34519      | Medium   | 3.8.4               | 3.8.4.post2+tuxcare |
-| CVE-2026-34519      | Medium   | 3.8.6               | 3.8.6.post4+tuxcare |
-| CVE-2026-34517      | Medium   | 3.8.1               | 3.8.1.post8+tuxcare |
-| CVE-2026-34517      | Medium   | 3.8.6               | 3.8.6.post4+tuxcare |
-| CVE-2026-34525      | Medium   | 3.8.6               | 3.8.6.post4+tuxcare |
+| CVE-2026-34520      | Critical | < 3.13.4            | 3.8.4.post2+tuxcare |
+| CVE-2026-34520      | Critical | < 3.13.4            | 3.8.5.post6+tuxcare |
+| CVE-2026-34520      | Critical | < 3.13.4            | 3.8.6.post3+tuxcare |
+| CVE-2026-34516      | High     | < 3.13.4            | 3.8.4.post2+tuxcare |
+| CVE-2026-34516      | High     | < 3.13.4            | 3.8.5.post5+tuxcare |
+| CVE-2026-34516      | High     | < 3.13.4            | 3.8.6.post4+tuxcare |
+| CVE-2026-34513      | High     | < 3.13.4            | 3.8.1.post8+tuxcare |
+| CVE-2026-34513      | High     | < 3.13.4            | 3.8.4.post2+tuxcare |
+| CVE-2026-34513      | High     | < 3.13.4            | 3.8.6.post4+tuxcare |
+| CVE-2026-22815      | High     | < 3.13.4            | 3.8.6.post4+tuxcare |
+| CVE-2026-34519      | Medium   | < 3.13.4            | 3.8.4.post2+tuxcare |
+| CVE-2026-34519      | Medium   | < 3.13.4            | 3.8.6.post4+tuxcare |
+| CVE-2026-34517      | Medium   | < 3.13.4            | 3.8.1.post8+tuxcare |
+| CVE-2026-34517      | Medium   | < 3.13.4            | 3.8.6.post4+tuxcare |
+| CVE-2026-34525      | Medium   | < 3.13.4            | 3.8.6.post4+tuxcare |
 | CVE-2025-53643      | High     | < 3.12.14           | 3.8.1.post5+tuxcare |
 | CVE-2024-52304      | High     | < 3.10.11           | 3.8.1.post7+tuxcare |
 | CVE-2024-52304      | High     | < 3.10.11           | 3.8.5.post2+tuxcare |
@@ -345,7 +345,7 @@ Fixes for the following vulnerabilities are available in ELS for Python Librarie
 
 | CVE ID         | Severity | Vulnerable Versions | Safe Version          |
 | :------------: | :------: | :-----------------: | :-------------------: |
-| CVE-2026-34070 | High     | 0.3.83              | 0.3.83.post1+tuxcare  |
+| CVE-2026-34070 | High     | < 1.2.22            | 0.3.83.post1+tuxcare  |
 
   </template>
 
@@ -353,7 +353,7 @@ Fixes for the following vulnerabilities are available in ELS for Python Librarie
 
 | CVE ID         | Severity | Vulnerable Versions | Safe Version         |
 | :------------: | :------: | :-----------------: | :------------------: |
-| CVE-2024-43598 | High     | 3.3.5               | 3.3.5.post1+tuxcare  |
+| CVE-2024-43598 | High     | < 4.6.0             | 3.3.5.post1+tuxcare  |
 
   </template>
 
@@ -363,12 +363,12 @@ Fixes for the following vulnerabilities are available in ELS for Python Librarie
 | :------------: | :------: | :-----------------: | :--------------------: |
 | CVE-2026-2635  | Critical | 2.22.4              | 2.22.4.post2+tuxcare   |
 | CVE-2026-2033  | High     | 2.22.4              | 2.22.4.post2+tuxcare   |
-| CVE-2025-15031 | Critical | 2.22.4              | 2.22.4.post2+tuxcare   |
-| CVE-2025-14287 | High     | 2.22.4              | 2.22.4.post2+tuxcare   |
+| CVE-2025-15031 | Critical | <= 3.10.1           | 2.22.4.post2+tuxcare   |
+| CVE-2025-14287 | High     | < 3.7.0             | 2.22.4.post2+tuxcare   |
 | CVE-2025-14279 | High     | 2.22.4              | 2.22.4.post1+tuxcare   |
-| CVE-2025-14279 | High     | 2.9.1               | 2.9.1.post1+tuxcare    |
-| CVE-2025-14287 | High     | 2.9.1               | 2.9.1.post1+tuxcare    |
-| CVE-2025-10279 | High     | 2.9.1               | 2.9.1.post1+tuxcare    |
+| CVE-2025-14279 | High     | < 3.5.0             | 2.9.1.post1+tuxcare    |
+| CVE-2025-14287 | High     | < 3.7.0             | 2.9.1.post1+tuxcare    |
+| CVE-2025-10279 | High     | < 3.4.0             | 2.9.1.post1+tuxcare    |
 | CVE-2026-2635  | Critical | 2.9.1               | 2.9.1.post1+tuxcare    |
 | CVE-2026-2033  | High     | 2.9.1               | 2.9.1.post1+tuxcare    |
 | CVE-2025-0453  | High     | 2.22.4              | 2.22.4.post1+tuxcare   |
@@ -435,9 +435,9 @@ Fixes for the following vulnerabilities are available in ELS for Python Librarie
 
 | CVE ID              | Severity | Vulnerable Versions | Safe Version         |
 | :-----------------: | :------: | :-----------------: | :------------------: |
-| CVE-2026-40192      | High     | 10.4.0              | 10.4.0.post2+tuxcare |
-| CVE-2026-25990      | High     | 10.4.0              | 10.4.0.post1+tuxcare |
-| CVE-2026-25990      | High     | 11.3.0              | 11.3.0.post1+tuxcare |
+| CVE-2026-40192      | High     | >= 10.3.0, < 12.2.0 | 10.4.0.post2+tuxcare |
+| CVE-2026-25990      | High     | >= 10.3.0, < 12.1.1 | 10.4.0.post1+tuxcare |
+| CVE-2026-25990      | High     | >= 10.3.0, < 12.1.1 | 11.3.0.post1+tuxcare |
 | CVE-2025-48379      | High     | 11.2.1              | 11.2.1.post1+tuxcare |
 | CVE-2024-28219      | Medium   | < 10.3.0            | 9.4.0.post3+tuxcare  |
 | CVE-2024-28219      | Medium   | < 10.3.0            | 9.5.0.post2+tuxcare  |
@@ -487,7 +487,7 @@ Fixes for the following vulnerabilities are available in ELS for Python Librarie
 
 | CVE ID         | Severity | Vulnerable Versions | Safe Version         |
 | :------------: | :------: | :-----------------: | :------------------: |
-| CVE-2026-32597 | High     | 1.7.1               | 1.7.1.post2+tuxcare  |
+| CVE-2026-32597 | High     | < 2.12.0            | 1.7.1.post2+tuxcare  |
 | CVE-2025-45768 | High     | 2.8.0               | 2.8.0.post1+tuxcare  |
 | CVE-2025-45768 | High     | 2.10.1              | 2.10.1.post1+tuxcare |
 | CVE-2022-29217 | High     | >= 1.5.0, < 2.4.0   | 1.7.1.post1+tuxcare  |
@@ -515,12 +515,12 @@ Fixes for the following vulnerabilities are available in ELS for Python Librarie
 
 | CVE ID         | Severity | Vulnerable Versions | Safe Version          |
 | :------------: | :------: | :-----------------: | :-------------------: |
-| CVE-2026-27459 | Critical | 23.3.0              | 23.3.0.post1+tuxcare  |
-| CVE-2026-27459 | Critical | 24.3.0              | 24.3.0.post1+tuxcare  |
-| CVE-2026-27459 | Critical | 25.3.0              | 25.3.0.post1+tuxcare  |
-| CVE-2026-27448 | Medium   | 23.3.0              | 23.3.0.post1+tuxcare  |
-| CVE-2026-27448 | Medium   | 24.3.0              | 24.3.0.post1+tuxcare  |
-| CVE-2026-27448 | Medium   | 25.3.0              | 25.3.0.post1+tuxcare  |
+| CVE-2026-27459 | Critical | >= 22.0.0, < 26.0.0 | 23.3.0.post1+tuxcare  |
+| CVE-2026-27459 | Critical | >= 22.0.0, < 26.0.0 | 24.3.0.post1+tuxcare  |
+| CVE-2026-27459 | Critical | >= 22.0.0, < 26.0.0 | 25.3.0.post1+tuxcare  |
+| CVE-2026-27448 | Medium   | >= 0.14, < 26.0.0   | 23.3.0.post1+tuxcare  |
+| CVE-2026-27448 | Medium   | >= 0.14, < 26.0.0   | 24.3.0.post1+tuxcare  |
+| CVE-2026-27448 | Medium   | >= 0.14, < 26.0.0   | 25.3.0.post1+tuxcare  |
 
   </template>
 
@@ -594,7 +594,7 @@ Fixes for the following vulnerabilities are available in ELS for Python Librarie
 
 | CVE ID         | Severity | Vulnerable Versions | Safe Version         |
 | :------------: | :------: | :-----------------: | :------------------: |
-| CVE-2022-40897 | Medium   | 59.8.0              | 59.8.0.post1+tuxcare |
+| CVE-2022-40897 | Medium   | < 65.5.1            | 59.8.0.post1+tuxcare |
 | CVE-2025-47273 | High     | < 78.1.1            | 68.0.0.post1+tuxcare |
 | CVE-2025-47273 | High     | < 78.1.1            | 70.3.0.post1+tuxcare |
 | CVE-2025-47273 | High     | < 78.1.1            | 75.0.0.post1+tuxcare |
@@ -618,13 +618,13 @@ Fixes for the following vulnerabilities are available in ELS for Python Librarie
 
 | CVE ID         | Severity | Vulnerable Versions | Safe Version         |
 | :------------: | :------: | :-----------------: | :------------------: |
-| CVE-2026-35536 | High     | 6.1.0               | 6.1.0.post2+tuxcare  |
-| CVE-2026-31958 | High     | 6.1.0               | 6.1.0.post2+tuxcare  |
+| CVE-2026-35536 | High     | < 6.5.5             | 6.1.0.post2+tuxcare  |
+| CVE-2026-31958 | High     | < 6.5.5             | 6.1.0.post2+tuxcare  |
 | CVE-2025-47287 | High     | < 6.5.0             | 5.1.1.post1+tuxcare  |
 | CVE-2025-47287 | High     | < 6.5.0             | 6.1.0.post1+tuxcare  |
 | CVE-2024-52804 | High     | < 6.4.2             | 5.1.1.post1+tuxcare  |
 | CVE-2024-52804 | High     | < 6.4.2             | 6.1.0.post1+tuxcare  |
-| CVE-2023-28370 | Medium   | 6.1.0               | 6.1.0.post2+tuxcare  |
+| CVE-2023-28370 | Medium   | < 6.3.2             | 6.1.0.post2+tuxcare  |
 
   </template>
 
@@ -662,7 +662,7 @@ Fixes for the following vulnerabilities are available in ELS for Python Librarie
 | CVE-2025-50181 | Medium   | < 2.5.0             | 1.26.4.post4+tuxcare  |
 | CVE-2025-50181 | Medium   | < 2.5.0             | 1.26.20.post1+tuxcare |
 | CVE-2025-50181 | Medium   | < 2.5.0             | 2.0.7.post1+tuxcare   |
-| CVE-2024-37891 | Medium   | < 1.26.19           | 1.25.11.post5+tuxcare |
+| CVE-2024-37891 | Medium   | < 1.26.19; >= 2.0.0, < 2.2.2 | 1.25.11.post5+tuxcare |
 | CVE-2024-37891 | Medium   | < 1.26.19           | 1.26.4.post2+tuxcare  |
 | CVE-2023-45803 | Medium   | < 1.26.18           | 1.25.11.post2+tuxcare |
 | CVE-2023-45803 | Medium   | < 1.26.18           | 1.26.4.post1+tuxcare  |
