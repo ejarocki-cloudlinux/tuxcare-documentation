@@ -10,7 +10,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Apache Axis** 1.4
 * **Apache Commons BeanUtils** 1.6, 1.8.0, 1.8.3, 1.9.4, 1.10.1
 * **Apache Commons Collections** 3.2, 3.2.1
-* **Apache Commons Compress** 1.8.1, 1.12, 1.14, 1.15, 1.18, 1.19, 1.20, 1.21, 1.26.2
+* **Apache Commons Compress** 1.8.1, 1.12, 1.14, 1.15, 1.18, 1.19, 1.20, 1.21, 1.24.0, 1.25.0, 1.26.2
 * **Apache Commons Configuration** 2.12.0
 * **Apache Commons Digester** 2.0, 2.1
 * **Apache Commons FileUpload** 1.2.1, 1.2.2, 1.3.1, 1.5
@@ -35,6 +35,10 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Apereo CAS Client** 4.0.4
 * **Bouncy Castle** 1.64, 1.76, 1.77, 1.78.1
 * **c3p0** 0.9.5.5
+* **Cassandra Java Driver** 4.18.1
+* **Couchbase Java Client** 3.6.3
+* **Couchbase JVM Core IO** 2.6.3
+* **Couchbase JVM Core IO Deps** 1.6.3
 * **DNSJava** 2.1.7
 * **docx4j** 3.3.6
 * **Dom4j** 1.6.1
@@ -69,16 +73,18 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **json-io** 2.9.4
 * **jsoup** 1.7.2, 1.7.3
 * **JUnit** 4.13
-* **Lettuce** 6.1.10.RELEASE
+* **Lettuce** 6.1.10.RELEASE, 6.3.2.RELEASE
 * **Logback** 1.1.7, 1.2.3, 1.2.12, 1.2.13, 1.4.11, 1.4.14, 1.5.18
 * **LZ4** 1.8.0, 1.8.1
 * **mchange-commons-java** 0.2.15, 0.2.19, 0.2.20
-* **Micronaut** 3.6.0
+* **Micronaut** 3.6.0, 3.8.5
 * **Mozilla Rhino** 1.7.10, 1.7.15
 * **MyBatis** 2.3.5
 * **MySQL Connector/J** 5.1.49
 * **NekoHTML** 1.9.22
-* **Netty** 3.10.6.Final, 4.1.48.Final, 4.1.49.Final, 4.1.52.Final, 4.1.58.Final, 4.1.60.Final, 4.1.63.Final, 4.1.73.Final, 4.1.75.Final, 4.1.82.Final, 4.1.92.Final, 4.1.93.Final, 4.1.111.Final, 4.1.112.Final, 4.1.115.Final, 4.1.117.Final, 4.1.119.Final, 4.1.122.Final, 4.1.130.Final, 4.1.135.Final
+* **Neo4j Bolt Connection** 2.0.0
+* **Neo4j Java Driver** 5.28.5
+* **Netty** 3.10.6.Final, 4.1.48.Final, 4.1.49.Final, 4.1.52.Final, 4.1.58.Final, 4.1.60.Final, 4.1.63.Final, 4.1.73.Final, 4.1.75.Final, 4.1.82.Final, 4.1.92.Final, 4.1.93.Final, 4.1.94.Final, 4.1.107.Final, 4.1.108.Final, 4.1.111.Final, 4.1.112.Final, 4.1.115.Final, 4.1.117.Final, 4.1.119.Final, 4.1.122.Final, 4.1.130.Final, 4.1.135.Final
 * **Netty Incubator** 0.0.21.Final
 * **Nimbus JOSE + JWT** 8.23, 9.22, 9.23, 9.24.4, 9.37.3, 9.39.3
 * **Nimbus OAuth2 OIDC SDK** 9.43.3, 9.43.6

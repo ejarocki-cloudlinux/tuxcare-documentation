@@ -116,7 +116,7 @@ const techData = [
       },
       {
         name: "Apache Commons Compress",
-        versions: "1.8.1 | 1.12 | 1.14 | 1.15 | 1.18 | 1.19 | 1.20 | 1.21 | 1.26.2",
+        versions: "1.8.1 | 1.12 | 1.14 | 1.15 | 1.18 | 1.19 | 1.20 | 1.21 | 1.24.0 | 1.25.0 | 1.26.2",
         link: "./java-libraries/",
       },
       {
@@ -206,7 +206,7 @@ const techData = [
       },
       {
         name: "Apache Log4j",
-        versions: "1.2.16 | 1.2.17 | 2.17.1 | 2.17.2 | 2.18.0 | 2.22.1 | 2.24.3",
+        versions: "1.2.14 | 1.2.15 | 1.2.16 | 1.2.17 | 2.17.1 | 2.17.2 | 2.18.0 | 2.22.1 | 2.23.1 | 2.24.3",
         link: "./apache-log4j/",
       },
       {
@@ -298,6 +298,26 @@ const techData = [
       {
         name: "c3p0",
         versions: "0.9.5.5",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Cassandra Java Driver",
+        versions: "4.18.1",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Couchbase Java Client",
+        versions: "3.6.3",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Couchbase JVM Core IO",
+        versions: "2.6.3",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Couchbase JVM Core IO Deps",
+        versions: "1.6.3",
         link: "./java-libraries/",
       },
       {
@@ -502,7 +522,7 @@ const techData = [
       },
       {
         name: "Lettuce",
-        versions: "6.1.10.RELEASE",
+        versions: "6.1.10.RELEASE | 6.3.2.RELEASE",
         link: "./java-libraries/",
       },
       {
@@ -522,7 +542,7 @@ const techData = [
       },
       {
         name: "Micronaut",
-        versions: "3.6.0",
+        versions: "3.6.0 | 3.8.5",
         link: "./java-libraries/",
       },
       {
@@ -546,8 +566,18 @@ const techData = [
         link: "./java-libraries/",
       },
       {
+        name: "Neo4j Bolt Connection",
+        versions: "2.0.0",
+        link: "./java-libraries/",
+      },
+      {
+        name: "Neo4j Java Driver",
+        versions: "5.28.5",
+        link: "./java-libraries/",
+      },
+      {
         name: "Netty",
-        versions: "3.10.6.Final | 4.1.48.Final | 4.1.49.Final | 4.1.52.Final | 4.1.58.Final | 4.1.60.Final | 4.1.63.Final | 4.1.73.Final | 4.1.75.Final | 4.1.82.Final | 4.1.92.Final | 4.1.93.Final | 4.1.111.Final | 4.1.112.Final | 4.1.115.Final | 4.1.117.Final | 4.1.119.Final | 4.1.122.Final | 4.1.130.Final | 4.1.135.Final",
+        versions: "3.10.6.Final | 4.1.48.Final | 4.1.49.Final | 4.1.52.Final | 4.1.58.Final | 4.1.60.Final | 4.1.63.Final | 4.1.73.Final | 4.1.75.Final | 4.1.82.Final | 4.1.92.Final | 4.1.93.Final | 4.1.94.Final | 4.1.107.Final | 4.1.108.Final | 4.1.111.Final | 4.1.112.Final | 4.1.115.Final | 4.1.117.Final | 4.1.119.Final | 4.1.122.Final | 4.1.130.Final | 4.1.135.Final",
         link: "./java-libraries/",
       },
       {
@@ -1288,7 +1318,7 @@ const techData = [
       },
       {
         name: "jQuery",
-        versions: "1.8.2 | 1.11.3 | 1.12.4 | 2.2.4 | 3.1.1 | 3.2.1 | 3.3.1 | 3.4.1",
+        versions: "1.8.2 | 1.8.3 | 1.11.3 | 1.12.4 | 2.1.3 | 2.2.4 | 3.1.1 | 3.2.1 | 3.3.1 | 3.4.1",
         link: "./jquery/",
       },
       {
@@ -2244,7 +2274,7 @@ const techData = [
       },
       {
         name: "setuptools",
-        versions: "59.8.0 | 65.5.1 | 68.0.0 | 70.3.0 | 75.0.0 | 75.8.0",
+        versions: "59.8.0 | 65.5.1 | 68.0.0 | 70.3.0 | 75.0.0 | 75.3.2 | 75.8.0",
         link: "./python-libraries/",
       },
       {
