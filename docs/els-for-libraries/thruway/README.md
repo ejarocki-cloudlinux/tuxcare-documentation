@@ -60,7 +60,7 @@ Other versions upon request.
    Install the TuxCare-maintained Thruway release that matches your project:
 
    <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require voryx/thruway:0.4.2-p1+tuxcare` },
+     { title: 'Composer CLI', content: `composer require voryx/thruway:0.4.2-p2+tuxcare` },
      { title: 'composer.json', content: pkgjson }
    ]" />
 
@@ -148,7 +148,7 @@ const cli =
 const pkgjson =
 `{
     "require": {
-        "voryx/thruway": "0.4.2-p1+tuxcare"
+        "voryx/thruway": "0.4.2-p2+tuxcare"
     }
 }`
 
