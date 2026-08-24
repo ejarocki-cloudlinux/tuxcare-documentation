@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for LoopBack from TuxCare provides security fixes for LoopBack versions that have reached their end of life. This allows you to continue running LoopBack applications without vulnerability concerns, even after official support has ended.
 
-## Supported LoopBack Versions
+## Supported Versions
 
 * LoopBack 1.10.0, 2.42.0
 

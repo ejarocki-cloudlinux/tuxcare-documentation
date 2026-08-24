@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for RequireJS from TuxCare provides security fixes for RequireJS versions that have reached their end of life. This allows you to continue running RequireJS applications without vulnerability concerns, even after official support has ended.
 
-## Supported RequireJS Versions
+## Supported Versions
 
 * RequireJS 2.1.22, 2.3.6
 

@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for Laminas from TuxCare provides security fixes for Laminas components that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
 
-## Supported Versions and Components
+## Supported Versions
 
 * **laminas-diactoros** 2.22.0
 

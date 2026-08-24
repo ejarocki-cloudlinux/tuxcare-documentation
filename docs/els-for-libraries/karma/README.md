@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for karma from TuxCare provides security fixes for karma versions that have reached their end of life. This allows you to continue running karma applications without vulnerability concerns, even after official support has ended.
 
-## Supported karma Versions
+## Supported Versions
 
 * karma 1.5.0, 1.7.0, 3.0.0, 4.0.0, 4.0.1, 4.1.0, 4.4.1, 5.0.0, 5.0.9
 

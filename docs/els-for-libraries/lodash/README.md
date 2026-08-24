@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for Lodash from TuxCare provides security fixes for Lodash versions that have reached their end of life. This allows you to continue running Lodash applications without vulnerability concerns, even after official support has ended.
 
-## Supported Lodash Versions
+## Supported Versions
 
 * Lodash 1.3.1, 2.4.2, 3.10.1, 3.2.0, 4.17.4, 4.17.5, 4.17.11, 4.17.15, 4.17.19, 4.17.21, 4.18.1, 4.5.0
 

@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for MySQL2 from TuxCare provides security fixes for MySQL2 versions that have reached their end of life. This allows you to continue running MySQL2 applications without vulnerability concerns, even after official support has ended.
 
-## Supported MySQL2 Versions
+## Supported Versions
 
 * MySQL2 2.3.3
 

@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fixes for Werkzeug. This allows you to continue running your Werkzeug applications without vulnerability concerns, even after official support has ended.
 
-## Supported Werkzeug Versions
+## Supported Versions
 
 * **Werkzeug** 1.0.1, 2.2.3, 2.3.8
 

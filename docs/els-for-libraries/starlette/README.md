@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fixes for Starlette. This allows you to continue running your Starlette applications without vulnerability concerns, even after official support has ended.
 
-## Supported Starlette Versions
+## Supported Versions
 
 * **Starlette** 0.13.6, 0.27.0
 

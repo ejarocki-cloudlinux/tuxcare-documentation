@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for Knockout from TuxCare provides security fixes for Knockout versions that have reached their end of life. This allows you to continue running Knockout applications without vulnerability concerns, even after official support has ended.
 
-## Supported Knockout Versions
+## Supported Versions
 
 * Knockout 2.3.0, 3.2.0, 3.4.2
 

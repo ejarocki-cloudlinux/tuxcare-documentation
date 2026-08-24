@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for Astro from TuxCare provides security fixes for Astro versions that have reached their end of life. This allows you to continue running Astro applications without vulnerability concerns, even after official support has ended.
 
-## Supported Astro Versions
+## Supported Versions
 
 * Astro 0.26.1, 1.9.2, 2.10.15, 3.6.5, 4.16.19, 5.18.1
 

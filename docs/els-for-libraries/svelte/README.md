@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for Svelte from TuxCare provides security fixes for Svelte versions that have reached their end of life. This allows you to continue running Svelte applications without vulnerability concerns, even after official support has ended.
 
-## Supported Svelte Versions
+## Supported Versions
 
 * Svelte 0.3.0, 1.64.1, 2.16.1, 3.59.2, 4.2.20
 

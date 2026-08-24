@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fixes for FastAPI. This allows you to continue running your FastAPI applications without vulnerability concerns, even after official support has ended.
 
-## Supported FastAPI Versions
+## Supported Versions
 
 * **FastAPI** 0.63.0, 0.104.1
 
