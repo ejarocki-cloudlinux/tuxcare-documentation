@@ -60,7 +60,7 @@ Other versions upon request.
    Install the TuxCare-maintained CakePHP release that matches your project:
 
    <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require cakephp/cakephp:2.10.24-p1+tuxcare` },
+     { title: 'Composer CLI', content: `composer require cakephp/cakephp:2.10.24-p2+tuxcare` },
      { title: 'composer.json', content: pkgjson }
    ]" />
 
@@ -148,7 +148,7 @@ const cli =
 const pkgjson =
 `{
     "require": {
-        "cakephp/cakephp": "2.10.24-p1+tuxcare"
+        "cakephp/cakephp": "2.10.24-p2+tuxcare"
     }
 }`
 

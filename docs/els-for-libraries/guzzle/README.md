@@ -65,7 +65,7 @@ Other versions upon request.
    <template #Guzzle_6.3>
 
    <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require guzzlehttp/guzzle:6.3.3-p1+tuxcare` },
+     { title: 'Composer CLI', content: `composer require guzzlehttp/guzzle:6.3.3-p2+tuxcare` },
      { title: 'composer.json', content: guzzlejson }
    ]" />
 
@@ -211,7 +211,7 @@ const cli =
 const guzzlejson =
 `{
     "require": {
-        "guzzlehttp/guzzle": "6.3.3-p1+tuxcare"
+        "guzzlehttp/guzzle": "6.3.3-p2+tuxcare"
     }
 }`
 

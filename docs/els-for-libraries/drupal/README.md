@@ -60,7 +60,7 @@ Other versions upon request.
    Install the TuxCare-maintained Drupal core release that matches your project:
 
    <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require drupal/core:9.5.11-p1+tuxcare` },
+     { title: 'Composer CLI', content: `composer require drupal/core:9.5.11-p6+tuxcare` },
      { title: 'composer.json', content: packagejson }
    ]" />
 
@@ -108,7 +108,7 @@ This allows Composer to fall back to Packagist for packages not available in the
 
 ### For legacy-project customers
 
-No special steps are needed. The `^9.5` range matches `9.5.11-p1+tuxcare` directly:
+No special steps are needed. The `^9.5` range matches `9.5.11-p6+tuxcare` directly:
 
 ```
 {
@@ -127,7 +127,7 @@ composer update drupal/core --with-all-dependencies
 
 ### For recommended-project customers (needs an alias)
 
-Because `drupal/core-recommended:9.5.11` requires exactly `drupal/core:9.5.11`, customers need a Composer inline alias to tell Composer that `9.5.11-p1+tuxcare` should be treated as `9.5.11`:
+Because `drupal/core-recommended:9.5.11` requires exactly `drupal/core:9.5.11`, customers need a Composer inline alias to tell Composer that `9.5.11-p6+tuxcare` should be treated as `9.5.11`:
 
 ```
 {
@@ -136,7 +136,7 @@ Because `drupal/core-recommended:9.5.11` requires exactly `drupal/core:9.5.11`, 
         {"type": "composer", "url": "https://packages.drupal.org/8"}
     ],
     "require": {
-        "drupal/core": "9.5.11-p1+tuxcare as 9.5.11",
+        "drupal/core": "9.5.11-p6+tuxcare as 9.5.11",
         "drupal/core-recommended": "^9.5"
     }
 }
@@ -148,7 +148,7 @@ Then run:
 composer update "drupal/core-*" drupal/core --with-all-dependencies
 ```
 
-The `"9.5.11-p1+tuxcare as 9.5.11"` alias is the key — it tells Composer to install the Satis version but pretend it's `9.5.11` for dependency resolution, satisfying `core-recommended`'s exact version constraint.
+The `"9.5.11-p6+tuxcare as 9.5.11"` alias is the key — it tells Composer to install the Satis version but pretend it's `9.5.11` for dependency resolution, satisfying `core-recommended`'s exact version constraint.
 
 ## What's Next?
 
@@ -194,7 +194,7 @@ const cli =
 const packagejson =
 `{
     "require": {
-        "drupal/core": "9.5.11-p1+tuxcare"
+        "drupal/core": "9.5.11-p6+tuxcare"
     }
 }`
 

@@ -60,7 +60,7 @@ Other versions upon request.
    Install the TuxCare-maintained Dompdf release that matches your project:
 
    <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require dompdf/dompdf:1.2.2-p1+tuxcare` },
+     { title: 'Composer CLI', content: `composer require dompdf/dompdf:1.2.2-p2+tuxcare` },
      { title: 'composer.json', content: dompdfjson }
    ]" />
 
@@ -148,7 +148,7 @@ const cli =
 const dompdfjson =
 `{
     "require": {
-        "dompdf/dompdf": "1.2.2-p1+tuxcare"
+        "dompdf/dompdf": "1.2.2-p2+tuxcare"
     }
 }`
 

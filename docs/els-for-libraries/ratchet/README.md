@@ -60,7 +60,7 @@ Other versions upon request.
    Install the TuxCare-maintained Ratchet release that matches your project:
 
    <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require cboden/ratchet:0.3.6-p3+tuxcare` },
+     { title: 'Composer CLI', content: `composer require cboden/ratchet:v0.3.6-p4+tuxcare` },
      { title: 'composer.json', content: pkgjson }
    ]" />
 
@@ -148,7 +148,7 @@ const cli =
 const pkgjson =
 `{
     "require": {
-        "cboden/ratchet": "0.3.6-p3+tuxcare"
+        "cboden/ratchet": "v0.3.6-p4+tuxcare"
     }
 }`
 

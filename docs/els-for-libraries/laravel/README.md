@@ -66,7 +66,7 @@ Other versions upon request.
    <template #Laravel>
 
    <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require laravel/framework:10.48.28-p1+tuxcare` },
+     { title: 'Composer CLI', content: `composer require laravel/framework:10.48.28-p2+tuxcare` },
      { title: 'composer.json', content: laraveljson }
    ]" />
 
@@ -177,7 +177,7 @@ const cli =
 const laraveljson =
 `{
     "require": {
-        "laravel/framework": "10.48.28-p1+tuxcare"
+        "laravel/framework": "10.48.28-p2+tuxcare"
     }
 }`
 

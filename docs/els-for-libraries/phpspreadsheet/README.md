@@ -60,7 +60,7 @@ Other versions upon request.
    Install the TuxCare-maintained PhpSpreadsheet release that matches your project:
 
    <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require phpoffice/phpspreadsheet:4.5.0-p1+tuxcare` },
+     { title: 'Composer CLI', content: `composer require phpoffice/phpspreadsheet:4.5.0-p3+tuxcare` },
      { title: 'composer.json', content: pkgjson }
    ]" />
 
@@ -148,7 +148,7 @@ const cli =
 const pkgjson =
 `{
     "require": {
-        "phpoffice/phpspreadsheet": "4.5.0-p1+tuxcare"
+        "phpoffice/phpspreadsheet": "4.5.0-p3+tuxcare"
     }
 }`
 

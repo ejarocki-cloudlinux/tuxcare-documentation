@@ -60,7 +60,7 @@ Other versions upon request.
    Install the TuxCare-maintained phpseclib release that matches your project:
 
    <CodeTabs :tabs="[
-     { title: 'Composer CLI', content: `composer require phpseclib/phpseclib:0.3.10-p1+tuxcare` },
+     { title: 'Composer CLI', content: `composer require phpseclib/phpseclib:0.3.10-p3+tuxcare` },
      { title: 'composer.json', content: phpseclibjson }
    ]" />
 
@@ -148,7 +148,7 @@ const cli =
 const phpseclibjson =
 `{
     "require": {
-        "phpseclib/phpseclib": "0.3.10-p1+tuxcare"
+        "phpseclib/phpseclib": "0.3.10-p3+tuxcare"
     }
 }`
 
