@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fixes for Flask. This allows you to continue running your Flask applications without vulnerability concerns, even after official support has ended.
 
-## Supported Flask Versions
+## Supported Versions
 
 * **Flask** 0.12.5, 1.1.2, 1.1.4, 2.2.1
 

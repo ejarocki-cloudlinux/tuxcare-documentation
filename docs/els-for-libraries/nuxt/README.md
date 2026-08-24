@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for Nuxt from TuxCare provides security fixes for Nuxt versions that have reached their end of life. This allows you to continue running Nuxt applications without vulnerability concerns, even after official support has ended.
 
-## Supported Nuxt Versions
+## Supported Versions
 
 * Nuxt 0.10.7, 1.4.5, 2.18.1, 3.2.0, 3.12.3, 3.12.4, 4.0.3
 

@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for Vuetify from TuxCare provides security fixes for Vuetify versions that have reached their end of life. This allows you to continue running Vuetify applications without vulnerability concerns, even after official support has ended.
 
-## Supported Vuetify Versions
+## Supported Versions
 
 * Vuetify 2.5.5, 2.6.13
 

@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for react-pdf from TuxCare provides security fixes for react-pdf versions that have reached their end of life. This allows you to continue running react-pdf applications without vulnerability concerns, even after official support has ended.
 
-## Supported react-pdf Versions
+## Supported Versions
 
 * react-pdf 7.7.1
 

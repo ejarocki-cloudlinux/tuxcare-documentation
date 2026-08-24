@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for Ember.js from TuxCare provides security fixes for Ember.js versions that have reached their end of life. This allows you to continue running Ember.js applications without vulnerability concerns, even after official support has ended.
 
-## Supported Ember.js Versions
+## Supported Versions
 
 * Ember.js 0.2.7, 1.13.11, 2.18.2, 3.28.6, 4.12.13
 

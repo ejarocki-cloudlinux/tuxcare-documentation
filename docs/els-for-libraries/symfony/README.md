@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for Symfony components such as Symfony Process, Symfony HttpFoundation from TuxCare provides security fixes for Symfony component versions that have reached their end-of-life. This allows you to continue running your applications without vulnerability concerns, even after official support has ended.
 
-## Supported Versions and Components
+## Supported Versions
 
 * **Symfony Process** 3.4.x, 4.4.x, 5.x, 6.x
 * **Symfony HttpFoundation** 2.8.x, 3.4.x, 4.4.x

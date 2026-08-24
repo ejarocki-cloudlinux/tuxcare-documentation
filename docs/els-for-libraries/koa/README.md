@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for koa from TuxCare provides security fixes for koa versions that have reached their end of life. This allows you to continue running koa applications without vulnerability concerns, even after official support has ended.
 
-## Supported koa Versions
+## Supported Versions
 
 * koa 1.7.1
 

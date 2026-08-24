@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for tailwindcss from TuxCare provides security fixes for tailwindcss versions that have reached their end of life. This allows you to continue running tailwindcss applications without vulnerability concerns, even after official support has ended.
 
-## Supported tailwindcss Versions
+## Supported Versions
 
 * tailwindcss 2.1.1
 

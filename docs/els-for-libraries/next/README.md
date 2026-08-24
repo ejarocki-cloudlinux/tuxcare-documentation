@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for Next.js from TuxCare provides security fixes for Next.js versions that have reached their end of life. This allows you to continue running Next.js applications without vulnerability concerns, even after official support has ended.
 
-## Supported Next.js Versions
+## Supported Versions
 
 * Next.js 12.3.7, 13.5.11, 14.2.35, 16.0.6
 

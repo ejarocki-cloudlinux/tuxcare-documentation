@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for jQuery UI from TuxCare provides security fixes for jQuery UI versions that have reached their end of life. This allows you to continue running jQuery UI applications without vulnerability concerns, even after official support has ended.
 
-## Supported jQuery UI Versions
+## Supported Versions
 
 * jQuery UI 1.10.4
 

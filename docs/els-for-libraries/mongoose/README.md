@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for Mongoose from TuxCare provides security fixes for Mongoose versions that have reached their end of life. This allows you to continue running Mongoose applications without vulnerability concerns, even after official support has ended.
 
-## Supported Mongoose Versions
+## Supported Versions
 
 * Mongoose 5.13.23, 6.12.2, 7.8.8, 9.6.2
 

@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for JSON Web Token from TuxCare provides security fixes for JSON Web Token versions that have reached their end of life. This allows you to continue running JSON Web Token applications without vulnerability concerns, even after official support has ended.
 
-## Supported JSON Web Token Versions
+## Supported Versions
 
 * JSON Web Token 0.1.0, 0.3.0, 0.4.0, 0.4.1, 5.4.0, 7.1.6, 8.5.1
 

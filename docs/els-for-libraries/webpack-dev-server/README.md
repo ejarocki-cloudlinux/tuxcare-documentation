@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for webpack-dev-server from TuxCare provides security fixes for webpack-dev-server versions that have reached their end of life. This allows you to continue running webpack-dev-server applications without vulnerability concerns, even after official support has ended.
 
-## Supported webpack-dev-server Versions
+## Supported Versions
 
 * webpack-dev-server 2.7.1, 2.11.5, 3.1.14, 3.11.0, 3.11.2, 3.11.3, 4.7.3, 4.11.0, 4.11.1, 4.15.1, 4.15.2
 

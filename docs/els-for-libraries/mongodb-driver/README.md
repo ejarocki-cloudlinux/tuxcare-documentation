@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for MongoDB driver from TuxCare provides security fixes for MongoDB driver versions that have reached their end of life. This allows you to continue running MongoDB applications without vulnerability concerns, even after official support has ended.
 
-## Supported MongoDB Driver Versions
+## Supported Versions
 
 * MongoDB Driver 2.2.36
 

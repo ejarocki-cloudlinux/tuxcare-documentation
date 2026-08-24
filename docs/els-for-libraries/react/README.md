@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for React from TuxCare provides security fixes for React versions that have reached their end of life. This allows you to continue running React applications without vulnerability concerns, even after official support has ended.
 
-## Supported React Versions
+## Supported Versions
 
 * React 15.6.2, 16.4.1, 19.2.0
 

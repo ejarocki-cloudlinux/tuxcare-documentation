@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for Angular from TuxCare provides security fixes for Angular versions that have reached their end of life. This allows you to continue running Angular applications without vulnerability concerns, even after official support has ended.
 
-## Supported Angular Versions
+## Supported Versions
 
 Angular versions from 4 to 19 are supported.
 

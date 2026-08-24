@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for PostCSS from TuxCare provides security fixes for PostCSS versions that have reached their end of life. This allows you to continue running PostCSS applications without vulnerability concerns, even after official support has ended.
 
-## Supported PostCSS Versions
+## Supported Versions
 
 * PostCSS 5.2.18, 6.0.23, 7.0.14, 7.0.17, 7.0.21, 7.0.32, 7.0.39, 8.2.13, 8.2.15, 8.3.6, 8.4.5, 8.4.14, 8.4.31, 8.4.41, 8.5.6
 

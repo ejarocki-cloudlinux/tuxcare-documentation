@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for bootstrap-sass from TuxCare provides security fixes for bootstrap-sass versions that have reached their end of life. This allows you to continue running bootstrap-sass applications without vulnerability concerns, even after official support has ended.
 
-## Supported bootstrap-sass Versions
+## Supported Versions
 
 * bootstrap-sass 3.4.0
 

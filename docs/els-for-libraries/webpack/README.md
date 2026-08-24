@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for webpack from TuxCare provides security fixes for webpack versions that have reached their end of life. This allows you to continue running webpack applications without vulnerability concerns, even after official support has ended.
 
-## Supported webpack Versions
+## Supported Versions
 
 * webpack 5.50.0, 5.55.0, 5.76.1, 5.88.2, 5.94.0
 

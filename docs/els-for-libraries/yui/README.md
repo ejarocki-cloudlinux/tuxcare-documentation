@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for YUI from TuxCare provides security fixes for YUI versions that have reached their end of life. This allows you to continue running YUI applications without vulnerability concerns, even after official support has ended.
 
-## Supported YUI Versions
+## Supported Versions
 
 * YUI 2.9.0, 3.18.1
 

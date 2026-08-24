@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for undici from TuxCare provides security fixes for undici versions that have reached their end of life. This allows you to continue running undici applications without vulnerability concerns, even after official support has ended.
 
-## Supported undici Versions
+## Supported Versions
 
 * undici 5.28.5, 5.29.0, 6.11.1
 

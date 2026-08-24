@@ -2,7 +2,7 @@
 
 Endless Lifecycle Support (ELS) for fastify from TuxCare provides security fixes for fastify versions that have reached their end of life. This allows you to continue running fastify applications without vulnerability concerns, even after official support has ended.
 
-## Supported fastify Versions
+## Supported Versions
 
 * fastify 3.29.5, 4.29.1
 
