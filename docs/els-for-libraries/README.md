@@ -1,8 +1,26 @@
 <!-- markdownlint-disable MD029 MD024 MD036 -->
 
-# Endless Lifecycle Support for Libraries
+# Endless Lifecycle Support for Language Ecosystems
 
 <ELSTechnology />
+
+## Installation for Language Ecosystems
+
+:::tip
+Have a subscription for an individual library or framework? Use the installation instructions on your library's page in the sections below.
+:::
+
+An ELS for Language Ecosystems subscription covers an entire language ecosystem rather than an individual library: TuxCare-patched versions of all supported packages for that language are delivered through the TuxCare-managed registry.
+
+* **JavaScript** — covers TuxCare-patched versions of supported npm packages, delivered through the TuxCare npm registry as drop-in replacements for their end-of-life upstream releases. Follow the canonical installation instructions on the [SecureChain + ELS JavaScript page](/securechain/javascript/#ELS).
+
+* **Java** — covers TuxCare-patched versions of supported Java libraries, delivered through a TuxCare-managed Maven repository as drop-in replacements for their end-of-life upstream releases. Installation instructions are provided during onboarding; if you need them again, contact the team through the [TuxCare Support Portal](https://tuxcare.com/support-portal/).
+
+* **Python** — covers TuxCare-patched versions of supported Python packages, delivered through a TuxCare-managed PyPI-compatible index as drop-in replacements for their end-of-life upstream releases. Installation instructions are provided during onboarding; if you need them again, contact the team through the [TuxCare Support Portal](https://tuxcare.com/support-portal/).
+
+* **PHP** — covers TuxCare-patched versions of supported PHP packages, delivered through a TuxCare-managed Composer repository as drop-in replacements for their end-of-life upstream releases. Installation instructions are provided during onboarding; if you need them again, contact the team through the [TuxCare Support Portal](https://tuxcare.com/support-portal/).
+
+* **.NET** — covers TuxCare-patched versions of supported NuGet packages, delivered through a TuxCare-managed NuGet feed as drop-in replacements for their end-of-life upstream releases. Installation instructions are provided during onboarding; if you need them again, contact the team through the [TuxCare Support Portal](https://tuxcare.com/support-portal/).
 
 ## Vulnerability Coverage and Target Response Times
 
@@ -21,13 +39,13 @@ Aligning with many industry standards and regulatory requirements, TuxCare is co
 
 Customers can report vulnerabilities by submitting a ticket through the [TuxCare Support Portal](https://tuxcare.com/support-portal/). TuxCare commits to providing an initial response to any reported issue within 3 days.
 
-Requests for customer-directed security patches for CVEs that are outside of the ELS for Libraries scope will be reviewed within 3 working days. If the request is accepted, we will provide the patch within the next 60 days.
+Requests for customer-directed security patches for CVEs that are outside of the ELS for Language Ecosystems scope will be reviewed within 3 working days. If the request is accepted, we will provide the patch within the next 60 days.
 
 Handling Multiple Vulnerabilities: In cases where several CVEs are reported simultaneously for fixing, TuxCare will discuss and agree upon resolution timelines separately with the customer.
 
 ## Enhanced Transparency & Visibility
 
-TuxCare's commitment to transparency and visibility is foundational to our ELS for Libraries offering. We aim to provide comprehensive details about how each package is built, verified, and distributed, ensuring complete trust in the software supply chain.
+TuxCare's commitment to transparency and visibility is foundational to our ELS for Language Ecosystems offering. We aim to provide comprehensive details about how each package is built, verified, and distributed, ensuring complete trust in the software supply chain.
 
 <!-- * **SLSA Compliance**: All packages are built and signed to ensure verifiable Supply-chain Levels for Software Artifacts (SLSA) compliance. They are securely constructed from vetted sources, include attestations for all dependencies, and undergo continuous testing to maintain integrity and security.
 -->

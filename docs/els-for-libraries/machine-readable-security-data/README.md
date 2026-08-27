@@ -13,7 +13,7 @@ Released fixes are available via [tuxcare.com/cve-tracker](https://tuxcare.com/c
 
 Each package built by TuxCare ships with an SBOM that lists its components, versions, and dependency relationships. SBOMs are provided in industry-standard formats — SPDX and CycloneDX — so they can be consumed by any SBOM-aware scanner or supply-chain tool.
 
-SBOMs are generated across all ELS for Libraries ecosystems (Java, JavaScript, Python, PHP, .NET) and published to [TuxCare Nexus](https://nexus.repo.tuxcare.com/). **Access requires TuxCare credentials.**
+SBOMs are generated across all ELS for Language Ecosystems languages (Java, JavaScript, Python, PHP, .NET) and published to [TuxCare Nexus](https://nexus.repo.tuxcare.com/). **Access requires TuxCare credentials.**
 
 SBOM repositories are currently published for:
 
@@ -79,7 +79,7 @@ Import the public key once. It can verify every TuxCare-signed package, so this 
 
 ### Verify a Package
 
-The verification procedure is the same for every ELS for Libraries ecosystem (Java, JavaScript, Python, PHP, .NET): obtain the exact published artifact, download its detached `.asc` signature from TuxCare Nexus, and run `gpg --verify`. Select your ecosystem below.
+The verification procedure is the same for every ELS for Language Ecosystems language (Java, JavaScript, Python, PHP, .NET): obtain the exact published artifact, download its detached `.asc` signature from TuxCare Nexus, and run `gpg --verify`. Select your ecosystem below.
 
 :::warning
 The signature location and artifact naming vary by ecosystem. The Java, JavaScript, PHP, and Python steps below are confirmed; the .NET steps shown are representative — confirm the exact signatures location and artifact naming for .NET with your TuxCare contact.
@@ -294,7 +294,7 @@ The signature location and artifact naming vary by ecosystem. The Java, JavaScri
 If `gpg` reports `BAD signature`, or cannot find the matching public key, treat the artifact as an integrity violation: stop the installation and re-obtain the package and signature from TuxCare over a trusted channel.
 
 :::tip
-All ELS for Libraries ecosystems are signed the same way. If you need a signatures-repository path or the TuxCare public key, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
+All ELS for Language Ecosystems ecosystems are signed the same way. If you need a signatures-repository path or the TuxCare public key, contact [sales@tuxcare.com](mailto:sales@tuxcare.com).
 :::
 
 ## Integrity Violation Events
@@ -303,7 +303,7 @@ An **integrity violation** is any event where an artifact obtained from TuxCare 
 
 ### What Counts as an Integrity Violation
 
-The ELS for Libraries delivery model is a set of per-ecosystem registries hosted on TuxCare Nexus (an npm registry for JavaScript, a PyPI-compatible index for Python, a Maven repository for Java, a Composer repository for PHP, and a NuGet feed for .NET), served exclusively over HTTPS, plus a detached GPG signature published alongside each artifact. Select your ecosystem for the integrity checks — and therefore the violation types — that apply to it:
+The ELS for Language Ecosystems delivery model is a set of per-ecosystem registries hosted on TuxCare Nexus (an npm registry for JavaScript, a PyPI-compatible index for Python, a Maven repository for Java, a Composer repository for PHP, and a NuGet feed for .NET), served exclusively over HTTPS, plus a detached GPG signature published alongside each artifact. Select your ecosystem for the integrity checks — and therefore the violation types — that apply to it:
 
 <TableTabs label="Choose ecosystem: " :labels="{ DotNET: '.NET' }">
 
@@ -360,7 +360,7 @@ The ELS for Libraries delivery model is a set of per-ecosystem registries hosted
 </TableTabs>
 
 :::tip
-**Metadata signature mismatch** is an OS-package-manager concept (yum/dnf and apt verify a GPG signature over the *repository metadata index* — `repomd.xml`, `InRelease`). The language registries used by ELS for Libraries — npm, pip, Maven, Composer, and NuGet — do not distribute a separately signed metadata index, so this specific violation type does not map to the setup. The equivalent authenticity and integrity guarantee is provided **per artifact** by the checksum/integrity-hash check and the detached GPG signature listed above.
+**Metadata signature mismatch** is an OS-package-manager concept (yum/dnf and apt verify a GPG signature over the *repository metadata index* — `repomd.xml`, `InRelease`). The language registries used by ELS for Language Ecosystems — npm, pip, Maven, Composer, and NuGet — do not distribute a separately signed metadata index, so this specific violation type does not map to the setup. The equivalent authenticity and integrity guarantee is provided **per artifact** by the checksum/integrity-hash check and the detached GPG signature listed above.
 :::
 
 ### Capturing Integrity Violations in a Dedicated Log

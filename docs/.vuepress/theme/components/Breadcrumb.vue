@@ -22,7 +22,7 @@ const siteTitle = computed(() => site.value.title);
 
 const titleMap = {
   '/els-for-languages/': 'ELS for Languages',
-  '/els-for-libraries/': 'ELS for Libraries',
+  '/els-for-libraries/': 'ELS for Language Ecosystems',
   '/els-for-applications/': 'ELS for Applications',
   '/els-for-os/': 'ELS for OS',
   '/els-for-runtimes/': 'ELS for Runtimes',
