@@ -20,7 +20,7 @@ The full text of every documentation page, concatenated into a single file, is a
 ## Extended Lifecycle Support (ELS)
 
 - [ELS for Operating Systems](https://docs.tuxcare.com/els-for-os/): Post-EOL security support for end-of-life Linux distributions.
-- [ELS for Libraries](https://docs.tuxcare.com/els-for-libraries/): Extended security fixes for open-source libraries.
+- [ELS for Language Ecosystems](https://docs.tuxcare.com/els-for-libraries/): Extended security fixes for open-source libraries across language ecosystems.
 - [ELS for Runtimes](https://docs.tuxcare.com/els-for-runtimes/): Extended support for language runtimes (PHP, Python, Node.js, etc.).
 - [ELS for Applications](https://docs.tuxcare.com/els-for-applications/): Security patches for end-of-life open-source applications.
 

@@ -1,6 +1,6 @@
 <template>
   <div class="heading text-center">
-    <h2>Available Guides for ELS for Libraries</h2>
+    <h2>Available Guides for ELS for Language Ecosystems</h2>
     <p>If something's missing or you have questions, contact <a href="mailto:sales@tuxcare.com">sales@tuxcare.com</a>.</p>
   </div>
 
