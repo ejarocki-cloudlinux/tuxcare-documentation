@@ -93,6 +93,12 @@ const applications = [
     icon: "/images/mysql.webp",
   },
   {
+    name: "PostgreSQL",
+    versions: "9.6 | 11 | 14",
+    link: "./postgresql/",
+    icon: "/images/postgresql.webp",
+  },
+  {
     name: "WildFly®",
     versions: "27.0.1.Final",
     link: "./wildfly/",
