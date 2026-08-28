@@ -50,7 +50,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **redis-py** 4.5.1
 * **requests** 2.25.1, 2.30.0, 2.31.0, 2.32.3
 * **scikit-learn** 1.0.2
-* **setuptools** 59.8.0, 65.5.1, 68.0.0, 70.3.0, 75.0.0, 75.3.2, 75.8.0
+* **setuptools** 59.8.0, 60.0.0, 65.5.1, 68.0.0, 70.3.0, 75.0.0, 75.3.2, 75.8.0
 * **torch** 1.13.1
 * **tornado** 5.1.1, 6.1.0
 * **tqdm** 4.66.1

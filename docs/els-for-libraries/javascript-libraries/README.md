@@ -53,7 +53,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **devalue** 2.0.1, 4.3.0, 4.3.1, 4.3.2, 4.3.3
 * **diff** 1.0.2, 1.4.0, 3.5.0, 7.0.0
 * **dns-packet** 1.3.1
-* **dompurify** 2.3.0, 2.4.0, 2.4.3, 2.4.7, 2.5.8, 2.5.9, 3.0.3, 3.1.6, 3.2.3
+* **dompurify** 2.3.0, 2.4.0, 2.4.3, 2.4.7, 2.5.8, 2.5.9, 3.0.3, 3.1.6, 3.2.3, 3.2.7, 3.4.8
 * **dset** 3.1.3
 * **ejs** 1.0.0, 2.7.4, 3.1.9
 * **elliptic** 6.4.1, 6.5.4, 6.5.5, 6.6.0, 6.6.1
@@ -65,7 +65,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **eventsource** 0.1.6, 1.1.0
 * **express-jwt** 0.1.3, 0.1.4
 * **extend** 3.0.0
-* **fast-uri** 2.4.0, 2.4.2, 3.0.1, 3.0.3
+* **fast-uri** 2.4.0, 2.4.2, 2.4.3, 3.0.1, 3.0.3
 * **fast-xml-parser** 3.14.0, 3.17.5, 3.19.0, 4.2.7, 4.4.0, 4.5.3, 4.5.6, 4.5.7
 * **fastify-middie** 8.3.3
 * **file-type** 17.1.6
@@ -83,7 +83,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **growl** 1.7.0
 * **handlebars** 1.0.12, 1.3.0, 2.0.0, 3.0.3, 3.0.8, 4.7.7, 4.7.8, 4.7.9
 * **hapi-hoek** 6.2.4
-* **happy-dom** 9.10.9, 14.12.3
+* **happy-dom** 9.10.9, 14.12.3, 15.11.7
 * **hawk** 0.13.1, 1.0.0, 1.1.1, 2.3.1, 3.1.0
 * **highcharts** 6.0.7, 6.1.0, 6.1.3, 6.2.0, 7.2.0, 7.2.2, 8.2.2
 * **highlight.js** 9.18.5
@@ -98,7 +98,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **is-my-json-valid** 2.10.1, 2.12.2
 * **jquery-validation** 1.19.0
 * **js-cookie** 2.2.1
-* **js-yaml** 3.3.1, 3.7.0, 3.14.1, 3.14.2, 4.1.0
+* **js-yaml** 3.3.1, 3.7.0, 3.14.1, 3.14.2, 3.15.0, 4.1.0
 * **json5** 0.4.0, 0.5.1, 1.0.1, 1.0.2
 * **jsoneditor** 5.19.0
 * **jsonpath-plus** 5.1.0, 6.0.1, 7.2.0
@@ -130,9 +130,13 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **multiparty** 2.2.0, 3.3.2
 * **mysql** 2.18.1
 * **negotiator** 0.5.3
+* **nestjs-core** 10.4.22
+* **nestjs-microservices** 10.4.22
+* **nestjs-platform-express** 10.4.22
 * **netmask** 1.0.6
 * **nguniversal-express-engine** 10.1.0
 * **node-forge** 0.10.0
+* **node-notifier** 5.4.5, 7.0.2
 * **nodemailer** 0.7.1, 2.7.2, 6.10.1
 * **npm-user-validate** 0.1.2, 0.1.5
 * **nth-check** 1.0.2
@@ -190,7 +194,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **uuid** 3.4.0, 8.3.2, 9.0.1, 11.0.5
 * **validator** 8.2.0, 10.11.0
 * **webpack-bundle-analyzer** 2.13.1
-* **webpack-dev-middleware** 1.10.2, 1.12.0, 1.12.2, 3.4.0, 3.5.1, 3.7.2, 3.7.3, 5.0.0, 5.3.0, 5.3.3
+* **webpack-dev-middleware** 1.10.2, 1.12.0, 1.12.2, 3.4.0, 3.5.1, 3.7.2, 3.7.3, 5.0.0, 5.3.0, 5.3.3, 7.4.5
 * **webpack-subresource-integrity** 1.4.0, 1.4.1
 * **websocket-driver** 0.6.5
 * **websocket-extensions** 0.1.1

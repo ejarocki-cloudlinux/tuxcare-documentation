@@ -4,7 +4,7 @@ Endless Lifecycle Support (ELS) for AngularJS from TuxCare provides security fix
 
 ## Supported Versions
 
-* AngularJS 1.4.4, 1.5.11, 1.6.10, 1.7.9, 1.8.2, 1.8.3
+* AngularJS 1.4.4, 1.4.7, 1.5.10, 1.5.11, 1.6.10, 1.7.9, 1.8.2, 1.8.3
 
 ## Installation
 
