@@ -96,7 +96,7 @@ const applications = [
     name: "PostgreSQL",
     versions: "9.6 | 11 | 14",
     link: "./postgresql/",
-    icon: "/images/postgresql.webp",
+    icon: "/images/TuxCare_color_icon.webp",
   },
   {
     name: "WildFly®",

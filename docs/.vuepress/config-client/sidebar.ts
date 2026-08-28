@@ -624,7 +624,7 @@ export default {
                 },
                 {
                     path: '/els-for-applications/postgresql/',
-                    icon: '/images/postgresql.webp',
+                    icon: '/images/TuxCare_color_icon.webp',
                 },
                 {
                     path: '/els-for-applications/wildfly/',
