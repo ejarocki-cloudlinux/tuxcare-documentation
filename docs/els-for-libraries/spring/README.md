@@ -297,45 +297,45 @@ ELS for Spring® also patches transitive dependencies at no extra cost, includin
 
 | Module | Version |
 |---|---|
-| spring-integration | 5.5.20, 6.4.10 |
-| spring-integration-amqp | 5.5.20, 6.4.10 |
-| spring-integration-bom | 5.5.20, 6.4.10 |
-| spring-integration-core | 5.5.20, 6.4.10 |
-| spring-integration-event | 5.5.20, 6.4.10 |
-| spring-integration-feed | 5.5.20, 6.4.10 |
-| spring-integration-file | 5.5.20, 6.4.10 |
-| spring-integration-ftp | 5.5.20, 6.4.10 |
+| spring-integration | 5.5.20, 6.4.10, 6.5.10 |
+| spring-integration-amqp | 5.5.20, 6.4.10, 6.5.10 |
+| spring-integration-bom | 5.5.20, 6.4.10, 6.5.10 |
+| spring-integration-core | 5.5.20, 6.4.10, 6.5.10 |
+| spring-integration-event | 5.5.20, 6.4.10, 6.5.10 |
+| spring-integration-feed | 5.5.20, 6.4.10, 6.5.10 |
+| spring-integration-file | 5.5.20, 6.4.10, 6.5.10 |
+| spring-integration-ftp | 5.5.20, 6.4.10, 6.5.10 |
 | spring-integration-gemfire | 5.5.20 |
-| spring-integration-groovy | 5.5.20, 6.4.10 |
-| spring-integration-http | 5.5.20, 6.4.10 |
-| spring-integration-ip | 5.5.20, 6.4.10 |
-| spring-integration-jdbc | 5.5.20, 6.4.10 |
-| spring-integration-jms | 5.5.20, 6.4.10 |
-| spring-integration-jmx | 5.5.20, 6.4.10 |
-| spring-integration-jpa | 5.5.20, 6.4.10 |
-| spring-integration-kafka | 5.5.20, 6.4.10 |
-| spring-integration-mail | 5.5.20, 6.4.10 |
-| spring-integration-mongodb | 5.5.20, 6.4.10 |
-| spring-integration-mqtt | 5.5.20, 6.4.10 |
-| spring-integration-r2dbc | 5.5.20, 6.4.10 |
-| spring-integration-redis | 5.5.20, 6.4.10 |
+| spring-integration-groovy | 5.5.20, 6.4.10, 6.5.10 |
+| spring-integration-http | 5.5.20, 6.4.10, 6.5.10 |
+| spring-integration-ip | 5.5.20, 6.4.10, 6.5.10 |
+| spring-integration-jdbc | 5.5.20, 6.4.10, 6.5.10 |
+| spring-integration-jms | 5.5.20, 6.4.10, 6.5.10 |
+| spring-integration-jmx | 5.5.20, 6.4.10, 6.5.10 |
+| spring-integration-jpa | 5.5.20, 6.4.10, 6.5.10 |
+| spring-integration-kafka | 5.5.20, 6.4.10, 6.5.10 |
+| spring-integration-mail | 5.5.20, 6.4.10, 6.5.10 |
+| spring-integration-mongodb | 5.5.20, 6.4.10, 6.5.10 |
+| spring-integration-mqtt | 5.5.20, 6.4.10, 6.5.10 |
+| spring-integration-r2dbc | 5.5.20, 6.4.10, 6.5.10 |
+| spring-integration-redis | 5.5.20, 6.4.10, 6.5.10 |
 | spring-integration-rmi | 5.5.20 |
-| spring-integration-rsocket | 5.5.20, 6.4.10 |
-| spring-integration-scripting | 5.5.20, 6.4.10 |
+| spring-integration-rsocket | 5.5.20, 6.4.10, 6.5.10 |
+| spring-integration-scripting | 5.5.20, 6.4.10, 6.5.10 |
 | spring-integration-security | 5.5.20 |
-| spring-integration-sftp | 5.5.20, 6.4.10 |
-| spring-integration-stomp | 5.5.20, 6.4.10 |
-| spring-integration-stream | 5.5.20, 6.4.10 |
-| spring-integration-syslog | 5.5.20, 6.4.10 |
-| spring-integration-test | 5.5.20, 6.4.10 |
-| spring-integration-test-support | 5.5.20, 6.4.10 |
-| spring-integration-webflux | 5.5.20, 6.4.10 |
-| spring-integration-websocket | 5.5.20, 6.4.10 |
-| spring-integration-ws | 5.5.20, 6.4.10 |
-| spring-integration-xml | 5.5.20, 6.4.10 |
-| spring-integration-xmpp | 5.5.20, 6.4.10 |
-| spring-integration-zeromq | 5.5.20, 6.4.10 |
-| spring-integration-zookeeper | 5.5.20, 6.4.10 |
+| spring-integration-sftp | 5.5.20, 6.4.10, 6.5.10 |
+| spring-integration-stomp | 5.5.20, 6.4.10, 6.5.10 |
+| spring-integration-stream | 5.5.20, 6.4.10, 6.5.10 |
+| spring-integration-syslog | 5.5.20, 6.4.10, 6.5.10 |
+| spring-integration-test | 5.5.20, 6.4.10, 6.5.10 |
+| spring-integration-test-support | 5.5.20, 6.4.10, 6.5.10 |
+| spring-integration-webflux | 5.5.20, 6.4.10, 6.5.10 |
+| spring-integration-websocket | 5.5.20, 6.4.10, 6.5.10 |
+| spring-integration-ws | 5.5.20, 6.4.10, 6.5.10 |
+| spring-integration-xml | 5.5.20, 6.4.10, 6.5.10 |
+| spring-integration-xmpp | 5.5.20, 6.4.10, 6.5.10 |
+| spring-integration-zeromq | 5.5.20, 6.4.10, 6.5.10 |
+| spring-integration-zookeeper | 5.5.20, 6.4.10, 6.5.10 |
 </template>
 
 <template #HATEOAS>

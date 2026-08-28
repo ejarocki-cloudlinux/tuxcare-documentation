@@ -55,7 +55,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Google Guice** 4.2.1
 * **Google OAuth Client** 1.25.0
 * **Grails** 2.5.6, 5.3.6, 6.2.1, 6.2.3
-* **H2 Database** 1.4.200, 2.1.210
+* **H2 Database** 1.3.176, 1.4.200, 2.1.210
 * **Hazelcast** 4.2.8
 * **HornetQ** 2.4.9.Final
 * **HPPC** 0.8.1
@@ -77,7 +77,7 @@ Endless Lifecycle Support (ELS) for Libraries from TuxCare provides security fix
 * **Logback** 1.1.7, 1.2.3, 1.2.12, 1.2.13, 1.4.11, 1.4.14, 1.5.18
 * **LZ4** 1.8.0, 1.8.1
 * **mchange-commons-java** 0.2.15, 0.2.19, 0.2.20
-* **Micronaut** 3.6.0, 3.8.5
+* **Micronaut** 3.6.0, 3.8.5, 3.10.4
 * **Mozilla Rhino** 1.7.10, 1.7.15
 * **MyBatis** 2.3.5
 * **MySQL Connector/J** 5.1.49

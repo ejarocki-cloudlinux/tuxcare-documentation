@@ -407,7 +407,7 @@ const techData = [
       },
       {
         name: "H2 Database",
-        versions: "1.4.200 | 2.1.210",
+        versions: "1.3.176 | 1.4.200 | 2.1.210",
         link: "./java-libraries/",
       },
       {
@@ -417,7 +417,7 @@ const techData = [
       },
       {
         name: "Hibernate",
-        versions: "4.3.11.Final | 5.1.2.Final | 5.4.3.Final | 5.4.30.Final | 5.4.31.Final | 5.4.32.Final | 5.4.33.Final | 5.5.6.Final | 5.5.9.Final | 5.6.15.Final | 6.2.5.Final",
+        versions: "4.3.11.Final | 5.1.2.Final | 5.4.3.Final | 5.4.30.Final | 5.4.31.Final | 5.4.32.Final | 5.4.33.Final | 5.5.6.Final | 5.5.9.Final | 5.6.15.Final | 6.2.5.Final | 6.4.10.Final | 6.5.3.Final | 6.6.39.Final",
         link: "./hibernate/",
       },
       {
@@ -542,7 +542,7 @@ const techData = [
       },
       {
         name: "Micronaut",
-        versions: "3.6.0 | 3.8.5",
+        versions: "3.6.0 | 3.8.5 | 3.10.4",
         link: "./java-libraries/",
       },
       {
@@ -726,7 +726,7 @@ const techData = [
       },
       {
         name: "Spring® Integration",
-        versions: "5.5.20 | 6.4.10",
+        versions: "5.5.20 | 6.4.10 | 6.5.10",
         link: "./spring/",
       },
       {
@@ -802,7 +802,7 @@ const techData = [
       },
       {
         name: "Eclipse Jetty",
-        versions: "7.6.0.v20120127 | 8.2.0.v20160908 | 9.2.16.v20160414 | 9.4.24.v20191120 | 9.4.41.v20210516 | 9.4.48.v20220622 | 9.4.50.v20221201 | 9.4.53.v20231009 | 9.4.57.v20241219 | 9.4.58.v20250814 | 9.4.59 | 9.4.60 | 9.4.61 | 9.4.62 | 10.0.26 | 10.0.27 | 10.0.28 | 10.0.29 | 10.0.30 | 11.0.19 | 11.0.26 | 11.0.27 | 11.0.28 | 11.0.29 | 11.0.30",
+        versions: "7.6.0.v20120127 | 8.2.0.v20160908 | 9.2.16.v20160414 | 9.4.24.v20191120 | 9.4.41.v20210516 | 9.4.48.v20220622 | 9.4.50.v20221201 | 9.4.53.v20231009 | 9.4.57.v20241219 | 9.4.58.v20250814 | 9.4.59 | 9.4.60 | 9.4.61 | 9.4.62 | 9.4.63 | 9.4.64 | 10.0.26 | 10.0.27 | 10.0.28 | 10.0.29 | 10.0.30 | 10.0.31 | 10.0.32 | 11.0.19 | 11.0.26 | 11.0.27 | 11.0.28 | 11.0.29 | 11.0.30",
         link: "./jetty/",
       },
       {
@@ -823,7 +823,7 @@ const techData = [
       },
       {
         name: "AngularJS",
-        versions: "1.4.4 | 1.5.11 | 1.6.10 | 1.7.9 | 1.8.2 | 1.8.3",
+        versions: "1.4.4 | 1.4.7 | 1.5.10 | 1.5.11 | 1.6.10 | 1.7.9 | 1.8.2 | 1.8.3",
         link: "./angularjs/",
       },
       {
@@ -1088,7 +1088,7 @@ const techData = [
       },
       {
         name: "dompurify",
-        versions: "2.3.0 | 2.4.0 | 2.4.3 | 2.4.7 | 2.5.8 | 2.5.9 | 3.0.3 | 3.1.6 | 3.2.3",
+        versions: "2.3.0 | 2.4.0 | 2.4.3 | 2.4.7 | 2.5.8 | 2.5.9 | 3.0.3 | 3.1.6 | 3.2.3 | 3.2.7 | 3.4.8",
         link: "./javascript-libraries/",
       },
       {
@@ -1158,7 +1158,7 @@ const techData = [
       },
       {
         name: "fast-uri",
-        versions: "2.4.0 | 2.4.2 | 3.0.1 | 3.0.3",
+        versions: "2.4.0 | 2.4.2 | 2.4.3 | 3.0.1 | 3.0.3",
         link: "./javascript-libraries/",
       },
       {
@@ -1253,7 +1253,7 @@ const techData = [
       },
       {
         name: "happy-dom",
-        versions: "9.10.9 | 14.12.3",
+        versions: "9.10.9 | 14.12.3 | 15.11.7",
         link: "./javascript-libraries/",
       },
       {
@@ -1338,7 +1338,7 @@ const techData = [
       },
       {
         name: "js-yaml",
-        versions: "3.3.1 | 3.7.0 | 3.14.1 | 3.14.2 | 4.1.0",
+        versions: "3.3.1 | 3.7.0 | 3.14.1 | 3.14.2 | 3.15.0 | 4.1.0",
         link: "./javascript-libraries/",
       },
       {
@@ -1542,6 +1542,21 @@ const techData = [
         link: "./javascript-libraries/",
       },
       {
+        name: "nestjs-core",
+        versions: "10.4.22",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "nestjs-microservices",
+        versions: "10.4.22",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "nestjs-platform-express",
+        versions: "10.4.22",
+        link: "./javascript-libraries/",
+      },
+      {
         name: "netmask",
         versions: "1.0.6",
         link: "./javascript-libraries/",
@@ -1564,6 +1579,11 @@ const techData = [
       {
         name: "node-forge",
         versions: "0.10.0",
+        link: "./javascript-libraries/",
+      },
+      {
+        name: "node-notifier",
+        versions: "5.4.5 | 7.0.2",
         link: "./javascript-libraries/",
       },
       {
@@ -1898,7 +1918,7 @@ const techData = [
       },
       {
         name: "Vite",
-        versions: "2.9.18 | 3.2.11 | 4.5.14 | 4.5.5 | 5.4.14 | 5.4.21",
+        versions: "2.9.18 | 3.2.11 | 4.5.5 | 4.5.14 | 5.4.14 | 5.4.21 | 6.4.2",
         link: "./vite/",
       },
       {
@@ -1933,7 +1953,7 @@ const techData = [
       },
       {
         name: "webpack-dev-middleware",
-        versions: "1.10.2 | 1.12.0 | 1.12.2 | 3.4.0 | 3.5.1 | 3.7.2 | 3.7.3 | 5.0.0 | 5.3.0 | 5.3.3",
+        versions: "1.10.2 | 1.12.0 | 1.12.2 | 3.4.0 | 3.5.1 | 3.7.2 | 3.7.3 | 5.0.0 | 5.3.0 | 5.3.3 | 7.4.5",
         link: "./javascript-libraries/",
       },
       {
@@ -2274,7 +2294,7 @@ const techData = [
       },
       {
         name: "setuptools",
-        versions: "59.8.0 | 65.5.1 | 68.0.0 | 70.3.0 | 75.0.0 | 75.3.2 | 75.8.0",
+        versions: "59.8.0 | 60.0.0 | 65.5.1 | 68.0.0 | 70.3.0 | 75.0.0 | 75.3.2 | 75.8.0",
         link: "./python-libraries/",
       },
       {
