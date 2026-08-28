@@ -623,6 +623,10 @@ export default {
                     icon: '/images/mysql.webp',
                 },
                 {
+                    path: '/els-for-applications/postgresql/',
+                    icon: '/images/TuxCare_color_icon.webp',
+                },
+                {
                     path: '/els-for-applications/wildfly/',
                     icon: '/images/wildfly-logo.webp',
                 },
